@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0835E974-15F4-AE02-D217-02A2DD98DFA9" name="F15_E3RFE">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>28791006-6732-9CAA-5180-B73685FB9632</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rfe_id" id="7C74C925-FBED-06B4-B937-0E76A2E0D407">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>B23A9F53-08C1-7C51-D22A-64BC567AAA87</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15_E3Status_status_id" id="9748ADB8-8017-54A0-35A6-0A1C8F15D22C">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>ED2A12C2-2D9F-822A-50F3-A0DF37A602F4</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CDE5BB37-7BAA-0410-581D-524E384BDDCD" referredColumn="FD412972-DA83-6DF2-EB3A-6090CC9C1CA6"/>
+</associations>
+</Column>
+<Column name="explanation" id="BBBF8A0E-D0E0-1CD0-961C-CF914C4C72AD">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>AEF13DE2-96FC-1DDA-7CD3-C35C6422BC27</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alt_protections" id="514A22D8-8BD5-0B3F-CD33-CF16AC7813A5">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>8AC4DBE4-22EF-7D28-6C80-99FB2ECA28C6</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="approval_review_date" id="A2988560-B14B-D971-79FC-EE694A844E75">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>B28DAB0B-954F-6CA3-523D-1AE33B20BD79</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B4EBA70D-6E2E-8094-35C4-19968009BDCD" name="F15_E3RFE_PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>9F8B9858-52E9-5416-9459-A6B84F5F9315</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C74C925-FBED-06B4-B937-0E76A2E0D407"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9725EE44-29B7-2E4F-70D1-DA5FA3ECC765" name="F15_E3RFE_F15_E3Status_FK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:40:47 UTC</createdTime>
+<generatorID>397605BD-5F5F-CEC9-1F11-61E3B6E8E61B</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9748ADB8-8017-54A0-35A6-0A1C8F15D22C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

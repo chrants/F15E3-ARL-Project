@@ -1,0 +1,154 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA588768-B1EA-20ED-012A-C79E7A79C113" name="F15_E3Employee">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>899D892F-C10B-2005-2F24-998834FE7571</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="employee_id" id="E317B451-9CDF-58EA-291D-D096828EA89A">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>E5056D8D-D654-74F5-7893-299671D3A32E</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_name" id="BC1AC056-93CC-16B7-A0FD-243F4D56D9D9">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>26224892-9B16-7D72-C616-278C1CD99C04</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_lab" id="0056490B-62FE-42C4-F2EC-FEBED318678C">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>848C7A39-71A9-F58E-9615-F0135F54FFC3</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_email" id="5A32B3CB-64D4-8E7F-D09E-245F622B384F">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>49AE1DE1-CABE-FE23-251B-7CB750DC9F0F</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>128</dataTypeSize>
+<ownDataTypeParameters>128,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_office" id="66D8EDDE-487C-BDD9-1D0A-6E99A4163691">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>35824488-A206-9CC5-A97A-4CB0611C89E8</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_phone" id="1C715EFE-3F3A-CF93-31A3-688206602A84">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>98D07B08-BF7B-2855-5888-57D65325B721</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="employee_status" id="77CFE4CD-464C-591B-ED64-1DC22768A2FB">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>7344F951-4CA8-3ED1-DE85-F7986A4460C1</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_eff_date" id="B4BEB2D1-6001-1A38-ECCD-C1F599F5C62D">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>09853DB4-CA13-D9D8-9462-BA882456ADF7</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15_E3Lab_lab_id" id="32A25997-DFAD-1E06-74E1-AD268F04D97C">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>035344FE-FBFE-6E0E-A581-8C5548189C50</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8179999B-E901-10F6-C331-ACAEC56BF914" referredColumn="A8FF5665-B68A-35A5-61DB-689BC2AE8ECF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7D4879AE-3377-D611-0986-20D5F5AF9D23" name="F15_E3Employee_PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>6CD9AF77-3666-8DBE-9C42-52ECD5088466</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E317B451-9CDF-58EA-291D-D096828EA89A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1823FA1-4C9C-06EC-EFD3-4F35EE15B7A6" name="F15_E3Employee_F15_E3Lab_FK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:36:48 UTC</createdTime>
+<generatorID>FE00AAC9-4BAA-EFED-04AD-18476CF52CA8</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32A25997-DFAD-1E06-74E1-AD268F04D97C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

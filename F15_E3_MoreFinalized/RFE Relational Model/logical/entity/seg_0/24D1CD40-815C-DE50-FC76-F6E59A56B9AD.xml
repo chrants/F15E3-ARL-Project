@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="24D1CD40-815C-DE50-FC76-F6E59A56B9AD" name="F15 E3Lab">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:41:31 UTC</createdTime>
+<generatorID>B2BD5E23-B9A8-34D1-08F8-74AC97A367FC</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lab id" id="DC6D3A8A-9C31-19A8-ED48-EE3F07B5DE24">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:41:31 UTC</createdTime>
+<generatorID>277A0C9A-3D05-BE46-13F9-8BAE700E7216</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="8E3DFDBB-162E-6F9C-CE02-0584DA1C4BB4">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:41:31 UTC</createdTime>
+<generatorID>9911026C-153E-D3FC-10E5-5438704E9C9D</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="22FB0052-A9B1-D17D-E898-CC9A2FC10F13" name="F15 E3Lab PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:41:31 UTC</createdTime>
+<generatorID>5B505AAD-D9CA-83F3-7F0F-01EC339BCE36</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DC6D3A8A-9C31-19A8-ED48-EE3F07B5DE24</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

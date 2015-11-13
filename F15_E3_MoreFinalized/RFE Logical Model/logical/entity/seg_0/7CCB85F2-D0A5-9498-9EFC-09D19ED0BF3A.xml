@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7CCB85F2-D0A5-9498-9EFC-09D19ED0BF3A" name="F15 E3Document">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:37:49 UTC</createdTime>
+<generatorID>A75BDF3D-B02E-E7F3-B876-10DF196905B2</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="document id" id="3F9507F1-0381-3AFA-8C96-1B9E676E403A">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:37:49 UTC</createdTime>
+<generatorID>2A09712A-AE83-28E5-7C3F-919194185425</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15 E3RFE rfe id" id="BF9207E2-A31C-0AE8-B7DC-3936B0B35D56">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:37:49 UTC</createdTime>
+<generatorID>B93AA2A7-B66D-2E51-882C-F1C509141212</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>431631EB-478A-ECD9-861A-817BDE18B598</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="document" id="5EC8287C-0C02-4EE9-10AF-F4FBB3D7462B">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:37:49 UTC</createdTime>
+<generatorID>D4D3EAA0-457C-0421-8C61-202020DF4315</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT023</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="39E3D708-10E5-28AA-9BF4-6A5EDBB5422B" name="F15 E3Document PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-26 23:37:49 UTC</createdTime>
+<generatorID>502A0777-6FC8-5DB6-4B7F-E1863C3E47E2</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3F9507F1-0381-3AFA-8C96-1B9E676E403A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

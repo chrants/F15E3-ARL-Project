@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="F15_E3Employee_F15_E3Lab_FK" directorySegmentName="seg_0" id="16379EB0-1CA6-2236-FB2D-74EF73878D98">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-27 15:41:31 UTC</createdTime>
+<generatorID>22AAD849-3E11-101A-3B10-023E9E59A6D8</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<sourcePk>22FB0052-A9B1-D17D-E898-CC9A2FC10F13</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>24D1CD40-815C-DE50-FC76-F6E59A56B9AD</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AE4308E0-AC35-0FCE-EE27-1670F424E6B1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

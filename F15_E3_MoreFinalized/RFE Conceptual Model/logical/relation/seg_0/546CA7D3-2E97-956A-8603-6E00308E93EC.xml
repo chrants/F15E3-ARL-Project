@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_12" directorySegmentName="seg_0" id="546CA7D3-2E97-956A-8603-6E00308E93EC">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-13 00:26:50 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<sourcePk>0AEA5444-B945-636E-0B48-C4B63665D517</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>FB9F0FCE-21E1-6686-8DB0-4CA6217A3132</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>899D892F-C10B-2005-2F24-998834FE7571</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

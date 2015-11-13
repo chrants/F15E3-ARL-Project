@@ -1,0 +1,36 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B9018965-6D74-C1C6-25C4-166326F8B729" name="F15_E3Lab_Employee">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-19 21:42:55 UTC</createdTime>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="false"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>899D892F-C10B-2005-2F24-998834FE7571</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lab_id" id="035344FE-FBFE-6E0E-A581-8C5548189C50">
+<createdBy>Sean</createdBy>
+<createdTime>2015-10-19 21:45:31 UTC</createdTime>
+<generatorID>FE00AAC9-4BAA-EFED-04AD-18476CF52CA8</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="CA44E508-805C-AAB8-140B-6330A60F5238" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9571D5A6-AE47-7170-CAF0-A3AA42D8A629</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
