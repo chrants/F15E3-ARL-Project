@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BC7EA623-092D-21C5-CA15-702022798C6B" name="Distributor">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:10:44 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="distributor_id" id="10D62CA0-394E-05AA-4B69-D55C7CE5E034">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:11:01 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="C36AC86F-5648-6E19-C900-3D239E56C548">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:11:27 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="51DED58F-E744-08EF-1543-00BC718F0138" name="Distributor PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:11:26 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>10D62CA0-394E-05AA-4B69-D55C7CE5E034</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

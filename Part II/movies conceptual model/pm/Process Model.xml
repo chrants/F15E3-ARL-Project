@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="EC6CE5DA-9448-7107-36D6-9C5127973D94">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:41:28 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

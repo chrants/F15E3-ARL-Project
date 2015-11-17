@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="movies conceptual model" id="6C4C5329-BFCC-3131-1987-162748610C59" version="3.5">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:41:27 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6C4C5329-BFCC-3131-1987-162748610C59</designId>
+</OSDM_Design>

@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="882E22C3-C98A-D864-5CA1-CD4CC57195C8" name="Movie">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:41:48 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="movie_id" id="0FB104D2-81FF-08BE-CF5C-541A70085B6C">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:42:49 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="title" id="4162D5CC-6269-C338-3551-257B4F71CC50">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:43:10 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="release_date" id="54CE8F7C-04D7-0797-8D3C-7AC740BD58D8">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:43:32 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rating" id="A9BC38E1-E4CB-806A-3939-3C14515AA712">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:44:17 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total_gross" id="31CFBD82-1918-9AA8-5CAD-F0FEB77FFAE3">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:07:14 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="inflation_gross" id="52DC4908-44CD-5775-53A5-8F5B0C2A7868">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:09:27 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="distributor_id" id="A9859CA6-F654-4722-13CA-C4882D84F32D">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:14:07 UTC</createdTime>
+<generatorID>1FE7423F-BFEF-1D7C-6B7C-DA155030F708</generatorID>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>10D62CA0-394E-05AA-4B69-D55C7CE5E034</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="80038C99-DF12-5DF3-2E14-1213FF6D3A9E" name="Movie PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:43:05 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0FB104D2-81FF-08BE-CF5C-541A70085B6C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="03736D7C-4806-5F96-3AE2-17A73425463D">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:41:28 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

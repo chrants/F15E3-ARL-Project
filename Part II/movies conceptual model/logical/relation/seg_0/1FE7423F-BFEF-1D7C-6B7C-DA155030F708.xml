@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_3" directorySegmentName="seg_0" id="1FE7423F-BFEF-1D7C-6B7C-DA155030F708">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:14:07 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<sourcePk>51DED58F-E744-08EF-1543-00BC718F0138</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BC7EA623-092D-21C5-CA15-702022798C6B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>882E22C3-C98A-D864-5CA1-CD4CC57195C8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

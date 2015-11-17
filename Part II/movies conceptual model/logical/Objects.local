@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="BC7EA623-092D-21C5-CA15-702022798C6B" name="Distributor" seqName="seg_0"/>
+   <object objectType="Entity" objectID="3D4FF212-E947-7848-2263-DAAEB759D915" name="Genre" seqName="seg_0"/>
+   <object objectType="Entity" objectID="882E22C3-C98A-D864-5CA1-CD4CC57195C8" name="Movie" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FF64800E-177F-0ACE-801B-A482AB3EAA89" name="Movie_Genres" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1FE7423F-BFEF-1D7C-6B7C-DA155030F708" name="Relation_3" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

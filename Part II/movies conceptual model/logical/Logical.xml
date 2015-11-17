@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="B090302F-D928-02BA-3EF5-E95BEF966126" mainViewID="0E2C8F76-9FAF-36EB-9F5C-C308385EEC46">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 21:41:27 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

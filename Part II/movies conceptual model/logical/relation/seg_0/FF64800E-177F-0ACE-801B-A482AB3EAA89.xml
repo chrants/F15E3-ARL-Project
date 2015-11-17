@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Movie_Genres" directorySegmentName="seg_0" id="FF64800E-177F-0ACE-801B-A482AB3EAA89">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-17 22:12:08 UTC</createdTime>
+<ownerDesignName>movies conceptual model</ownerDesignName>
+<engineerTo>
+<item key="8FAEAA53-3AE0-9727-81C8-C1E837A445EE" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>882E22C3-C98A-D864-5CA1-CD4CC57195C8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3D4FF212-E947-7848-2263-DAAEB759D915</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
