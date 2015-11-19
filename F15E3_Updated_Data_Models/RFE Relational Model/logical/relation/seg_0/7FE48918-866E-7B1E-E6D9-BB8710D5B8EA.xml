@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="emp_type_r1" directorySegmentName="seg_0" id="7FE48918-866E-7B1E-E6D9-BB8710D5B8EA">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:30:12 UTC</createdTime>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<sourcePk>56B4138D-E01B-F828-20A8-8447D8544B6F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4DFC676C-BB50-524D-4B5C-1EB3095F61FB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>716C834D-01BD-22DF-4AB7-78FB62300BDD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

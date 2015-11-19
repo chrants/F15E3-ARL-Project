@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="EA8793D9-08D5-C58B-24DA-50D94516A02C" mainViewID="6A0F7547-713C-B7B9-6918-808CF15488F0">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:42 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A604368-D145-604D-0E93-5287A6FE5A8E" name="F15E3_Auth">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>21C4560F-2BF2-708C-31B7-8CB85F29E0AA</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="auth_id" id="50E80728-7A03-1601-6649-63F3314E70D6">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>8017C62D-69E3-6EC1-744F-B188E4DA2E10</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="right_level" id="6338FF61-18E2-F217-8A29-47FF30A5F375">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>3DFC8D3A-55B9-1003-6267-D80CCE88FB10</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15E3_Employee_employee_id" id="CB150975-16FF-B1AF-4395-222161C5E3D7">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>38826E31-9E34-FD93-42A8-949802EF3EC9</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="12876345-5210-ADB5-205F-C3D28EAB33CD" referredColumn="770F55A9-F1E8-4547-4B4D-C061B2289BD6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FB95FC7A-10F4-1947-E42C-152FAB2CC098" name="F15E3_Auth_PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>ED9429C4-58A3-B1E9-7B1B-12298E8A81B1</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50E80728-7A03-1601-6649-63F3314E70D6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B55A905B-00A9-6FA7-F3F7-2500086611FC" name="F15E3_Auth__IDX">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>893F8DCA-68A6-4744-7472-9C76EE9A3DE1</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="CB150975-16FF-B1AF-4395-222161C5E3D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A10B67EE-C405-01AF-CFFF-A091AF3E78C7" name="F15E3_Auth_F15E3_Employee_FK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>893F8DCA-68A6-4744-7472-9C76EE9A3DE1</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB150975-16FF-B1AF-4395-222161C5E3D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

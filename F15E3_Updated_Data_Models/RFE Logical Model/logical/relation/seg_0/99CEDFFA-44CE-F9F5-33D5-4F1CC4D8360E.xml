@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK_ASS_3" directorySegmentName="seg_0" id="99CEDFFA-44CE-F9F5-33D5-4F1CC4D8360E">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:33:39 UTC</createdTime>
+<generatorID>63A41552-0726-0828-8684-657F143DDE13</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<sourcePk>0270C306-140B-F4F4-EDFC-D1BE3B5E0DE2</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0816E6D8-08FA-AAF8-7B5D-B1A96EE4468F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6A38C550-8058-3955-1E49-5E667E7BE796</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

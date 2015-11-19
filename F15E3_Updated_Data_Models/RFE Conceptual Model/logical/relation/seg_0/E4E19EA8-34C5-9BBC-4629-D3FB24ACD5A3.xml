@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="F15E3_Emp_Role_Type_Status" directorySegmentName="seg_0" id="E4E19EA8-34C5-9BBC-4629-D3FB24ACD5A3">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>0530D9FB-0616-D9AC-9F37-193CB6C4141A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>716C834D-01BD-22DF-4AB7-78FB62300BDD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

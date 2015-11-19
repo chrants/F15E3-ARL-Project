@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CB5111E9-661A-60F5-840D-BAE9F89D0967" name="F15E3_Lab">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>46958D74-7453-CE9A-4C02-A7B72976976D</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="lab_id" id="D078E870-2CFD-8737-AC0A-3EB5979C882D">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>B21F0416-43E2-4B8D-EEFA-78B0A94C7291</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lab_code" id="446B4E8A-C107-CE11-3E4D-9758EEB8BB76">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-19 21:55:25 UTC</createdTime>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="026BA129-4BC1-EB4C-06CB-69558BD97986">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>C3657DC9-2F8A-6FC3-331D-9538B53F2F66</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="37FDE372-642A-866B-1463-F686805B6E9F" name="F15E3_Lab_PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>5CB3F3C1-BE07-C3BF-1ADE-220BE47B1AAD</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D078E870-2CFD-8737-AC0A-3EB5979C882D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1AF91157-3202-1552-3B7D-5F4EA4C78946" name="F15E3_Status_History">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="status_history_id" id="3E45A34A-1250-BA6D-7658-7302320E5348">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<importedID>34CEE774-753C-0BD6-08B9-559921D918F1</importedID>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rfe_id" id="8380A8C5-C2F1-7580-4C2D-4CB3D8926EFB">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<generatorID>9692CF11-FC1A-2361-5E5A-6718B39EF0A5</generatorID>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<importedID>4DB9D55E-DD1C-BF14-C6C9-5207C81D0C64</importedID>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>C2E70F0A-59C3-771B-5C44-EA8633C49681</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status_id" id="9404B87D-CCA6-27CC-8B96-9DF206DD2193">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<generatorID>FFA7D1B3-B58B-21D3-4A54-C6BD641F91DE</generatorID>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<importedID>2613296D-CB79-767E-4581-C1629F91163D</importedID>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9C30A1F9-2309-7745-6C49-8F385DFFACA0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="effective_date" id="C9BF062A-CF03-979B-02F2-23C5546908B4">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<importedID>B4916ACA-240A-4626-2298-5221C8E79636</importedID>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entered_by_emp_id" id="FCB7275F-10FB-01DC-F8E8-CB4A7E0C2BEC">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<importedID>DB900C5C-A753-2CBA-920D-41038C15F469</importedID>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A9F6B495-D6AA-FC69-7D30-40D91758A272" name="F15_E3Status_History PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3E45A34A-1250-BA6D-7658-7302320E5348</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

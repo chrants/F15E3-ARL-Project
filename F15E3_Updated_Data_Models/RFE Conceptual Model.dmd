@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="RFE Conceptual Model" id="82B5E657-8393-A06A-7804-6FB8ACEE88CC" version="3.5">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 21:44:42 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>82B5E657-8393-A06A-7804-6FB8ACEE88CC</designId>
+</OSDM_Design>

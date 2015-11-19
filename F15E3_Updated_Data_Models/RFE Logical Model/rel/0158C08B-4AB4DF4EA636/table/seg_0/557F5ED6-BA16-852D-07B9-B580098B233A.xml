@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="557F5ED6-BA16-852D-07B9-B580098B233A" name="F15E3_RFE_Contacts">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="F15E3_RFE_rfe_id" id="0522CD60-1063-D9B4-BFD1-452F702E8B17">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43954C78-11AD-BB94-80FA-0990D7E34D9A" referredColumn="ABAB16CF-560C-A91A-B460-2C3677F4634C"/>
+</associations>
+</Column>
+<Column name="F15E3_Employee_employee_id" id="BA808DE5-91C4-1483-33CF-44EB38CCB7E1">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="38BDE163-B5F0-BA35-6695-DAB8224F1695" referredColumn="770F55A9-F1E8-4547-4B4D-C061B2289BD6"/>
+</associations>
+</Column>
+<Column name="effective_date" id="69DB5EF3-EB2E-5825-93CB-AD24C702105A">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>C64099E4-D4D9-C79A-C287-639AEDDEBA51</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<isDependOnFK_AsMandatory>true</isDependOnFK_AsMandatory>
+</Column>
+<Column name="comments" id="AD35E175-9A42-5612-DC76-3B5A4C65AB79">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>5FE6A093-C0E2-D1F2-90E4-0B54B7AC52F0</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="68E5EBA9-3D36-6334-1F43-420C15A1C7EA" name="F15E3_RFE_Contacts_PK">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0522CD60-1063-D9B4-BFD1-452F702E8B17"/>
+<colUsage columnID="BA808DE5-91C4-1483-33CF-44EB38CCB7E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFC9A63B-5251-A110-87FE-47936C8DE0B5" name="FK_ASS_1">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>5ED5BC62-C00A-B269-371C-399E33C0A087</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0522CD60-1063-D9B4-BFD1-452F702E8B17"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73DBF73B-ED5E-2807-826A-0C0EE0F276A2" name="FK_ASS_2">
+<createdBy>Sean</createdBy>
+<createdTime>2015-11-17 22:32:45 UTC</createdTime>
+<generatorID>5ED5BC62-C00A-B269-371C-399E33C0A087</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA808DE5-91C4-1483-33CF-44EB38CCB7E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
