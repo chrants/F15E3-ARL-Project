@@ -178,6 +178,21 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_create_view_trigger
      	localtimestamp,
 		''); -- What to put for comment?
 
+     -- Insert security Chair into Contacts table
+     INSERT INTO F15E3_RFE_Contacts(
+     	F15E3_RFE_rfe_id,
+     	F15E3_Employee_employee_id,
+     	role_id,
+     	effective_date,
+     	comments) 
+     VALUES (
+     	rfe_no,
+     	(SELECT employee_id FROM F15E3_Employee 
+     		WHERE F15E3_Emp_Type_emp_type = 'Security Chairperson'),
+     	5, -- security Chair role id
+     	localtimestamp,
+		''); -- What to put for comment?
+
      -- Insert executive director into Contacts table
      INSERT INTO F15E3_RFE_Contacts(
      	F15E3_RFE_rfe_id,
@@ -188,42 +203,41 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_create_view_trigger
      VALUES (
      	rfe_no,
      	(SELECT employee_id FROM F15E3_Employee 
-     		WHERE F15E3_Lab_lab_id = lab_no 
-     		AND F15E3_Emp_Type_emp_type = 'Lab Director'),
-     	4, -- lab director role id
+     		WHERE F15E3_Emp_Type_emp_type = 'Executive Director'),
+     	6, -- exec director role id
      	localtimestamp,
 		''); -- What to put for comment?
    END F15E3_RFE_create_view_trigger;
 /
 
 -- BAD
-F15E3_RFE_seq;
-drop sequence RFE_ID;
-create sequence dept_deptno
-start with 60
-increment by 1
-nomaxvalue;
+-- F15E3_RFE_seq;
+-- drop sequence RFE_ID;
+-- create sequence dept_deptno
+-- start with 60
+-- increment by 1
+-- nomaxvalue;
 
-drop view dept_view ;
+-- drop view dept_view ;
 
-create view dept_view as
-SELECT *
-FROM dept ;
+-- create view dept_view as
+-- SELECT *
+-- FROM dept ;
 
-CREATE OR REPLACE TRIGGER dept_view_trigger
-   INSTEAD OF INSERT ON dept_view
-   DECLARE
-     deptno NUMBER;
-   BEGIN
-     deptno := dept_deptno.nextval;
-     INSERT INTO DEPT(DEPTNO, DNAME, LOC) VALUES (
-        deptno,
-        :NEW.DNAME,
-        :NEW.LOC
-     );
-     INSERT INTO EMP(EMPNO, DEPTNO) VALUES (10, deptno);
-   END dept_view_trigger;
-/
+-- CREATE OR REPLACE TRIGGER dept_view_trigger
+--    INSTEAD OF INSERT ON dept_view
+--    DECLARE
+--      deptno NUMBER;
+--    BEGIN
+--      deptno := dept_deptno.nextval;
+--      INSERT INTO DEPT(DEPTNO, DNAME, LOC) VALUES (
+--         deptno,
+--         :NEW.DNAME,
+--         :NEW.LOC
+--      );
+--      INSERT INTO EMP(EMPNO, DEPTNO) VALUES (10, deptno);
+--    END dept_view_trigger;
+-- /
 
-insert into dept_view(DEPTNO, DNAME, LOC) VALUES (60, 'New_Dept', 'Austin');
+-- insert into dept_view(DEPTNO, DNAME, LOC) VALUES (60, 'New_Dept', 'Austin');
 
