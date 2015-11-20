@@ -1,7 +1,6 @@
 DELETE FROM F15E3_Employee;
 
 INSERT INTO F15E3_Employee_view (employee_name,
-    employee_lab,
     employee_email,
     employee_office,
     employee_phone,
@@ -9,10 +8,9 @@ INSERT INTO F15E3_Employee_view (employee_name,
     status_eff_date,
     F15E3_Emp_Type_emp_type)
 VALUES ('employee_name',
-    'employee_lab',
     'employee_email',
-    'employee_office',
-    'employee_phone',
+    'office',
+    'phone',
     'A',
     '11-Nov-1999',
     'Executive Director');

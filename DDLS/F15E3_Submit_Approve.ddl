@@ -29,11 +29,11 @@
 -- /
 
 create view F15E3_RFE_approve_view as
-SELECT rfe_id,
+SELECT rfe_id
 FROM F15E3_RFE;
 
 -- Approve RFE Trigger - Update Status/Time
-CREATE OR REPLACE TRIGGER F15E3_RFE_approve_view_trigger
+CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
    INSTEAD OF UPDATE ON F15E3_RFE_approve_view
    DECLARE
      rfe_no NUMBER;
@@ -46,18 +46,17 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_view_trigger
      FROM F15E3_RFE
      WHERE rfe_id = rfe_no;
 
-     CASE status_no
-      WHEN 1 THEN -- Entered -> Submitted
-         status_no := 2;
-      WHEN 2 THEN -- Submitted -> SA Approved
-         status_no := 6;
-      WHEN 6 THEN -- SA Approved -> LD Approval
-         status_no := 7;
-      WHEN 7 THEN -- LD Approval -> CH Approval
-         status_no := 8;
-      WHEN 8 THEN -- CH Approval -> Final Approved
-         status_no := 9;
-     END;
+     IF status_no = 1 THEN
+      status_no := 2;-- Entered -> Submitted
+     ELSIF status_no = 2 THEN
+      status_no := 6; -- Submitted -> SA Approved
+     ELSIF status_no = 6 THEN 
+      status_no := 7; -- SA Approved -> LD Approval
+     ELSIF status_no = 7 THEN 
+      status_no := 8; -- LD Approval -> CH Approval
+     ELSIF status_no = 8 THEN 
+      status_no := 9; -- CH Approval -> Final Approved
+     END IF;
 
      UPDATE F15E3_RFE 
      SET F15E3_Status_status_id = status_no -- 2 Is the 'submitted' status
@@ -76,16 +75,15 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_view_trigger
       localtimestamp,
       v('P100_LOGIN_EMP_ID'));
 
-    END F15E3_RFE_approve_view_trigger;
+    END F15E3_RFE_approve_trigger;
 /
 
-
 create view F15E3_RFE_status_update_view as
-SELECT rfe_id,
+SELECT rfe_id, F15E3_STATUS_STATUS_ID
 FROM F15E3_RFE;
 
 -- Reject/Recall/Return RFE Trigger - Update Status/Time
-CREATE OR REPLACE TRIGGER F15E3_RFE_status_update_view_trigger
+CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
    INSTEAD OF UPDATE ON F15E3_RFE_status_update_view
    DECLARE
      rfe_no NUMBER;
@@ -111,5 +109,5 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_status_update_view_trigger
       localtimestamp,
       v('P100_LOGIN_EMP_ID'));
 
-    END F15E3_RFE_status_update_view_trigger;
+    END F15E3_RFE_stat_update_trigger;
 /

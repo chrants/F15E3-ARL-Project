@@ -46,5 +46,3 @@ INSERT INTO F15E3_Emp_Type (emp_type)
 VALUES ('Security Chairperson');
 INSERT INTO F15E3_Emp_Type (emp_type)
 VALUES ('Executive Director');
-
-
