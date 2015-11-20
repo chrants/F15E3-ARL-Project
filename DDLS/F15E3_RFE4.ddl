@@ -2,7 +2,6 @@ create view F15E3_Employee_view as
 SELECT 
     employee_id,
     employee_name,
-    employee_lab,
     employee_email,
     employee_office,
     employee_phone,
@@ -10,8 +9,7 @@ SELECT
     status_eff_date,
     F15E3_Auth_auth_id,
     F15E3_Lab_lab_id,
-    F15E3_Emp_Type_emp_type,
-    F15E3_Emp_Type_emp_type1
+    F15E3_Emp_Type_emp_type
 FROM F15E3_Employee;
 
 create or replace TRIGGER F15E3_Employee_trigger
@@ -22,34 +20,38 @@ BEGIN
 	DECLARE
 	emp_id Integer;
 	BEGIN
-		IF (:NEW.F15E3_Emp_Type_emp_type = 'Executive Director') 
-		OR (:NEW.F15E3_Emp_Type_emp_type1 = 'Executive Director') THEN
+		IF (:NEW.F15E3_Emp_Type_emp_type = 'Executive Director') THEN
 			SELECT employee_id 
 			INTO emp_id
 			FROM F15E3_Employee 
-			WHERE (F15E3_Emp_Type_emp_type = 'Executive Director')
-			OR (F15E3_Emp_Type_emp_type1 = 'Executive Director');
+			WHERE (F15E3_Emp_Type_emp_type = 'Executive Director');
 		END IF;
-		IF (:NEW.F15E3_Emp_Type_emp_type = 'Security Chairperson') 
-		OR (:NEW.F15E3_Emp_Type_emp_type1 = 'Security Chairperson') THEN
+		IF (:NEW.F15E3_Emp_Type_emp_type = 'Security Chairperson')THEN
 			SELECT employee_id 
 			INTO emp_id
 			FROM F15E3_Employee 
-			WHERE (F15E3_Emp_Type_emp_type = 'Security Chairperson')
-			OR (F15E3_Emp_Type_emp_type1 = 'Security Chairperson');
+			WHERE (F15E3_Emp_Type_emp_type = 'Security Chairperson');
 		END IF;
 
+        -- CASE: One Executive Director or Secuirty Chairperson
+        IF(emp_id IS NOT NULL) THEN
+            raise_application_error(-20022,'An error was encountered - '
+                ||SQLCODE||' -ERROR- '||SQLERRM||'emp_id: '||emp_id);
+        END IF;
+
+        -- CASE: Too many executive directors/security chairperson
 		EXCEPTION
-		WHEN no_data_found THEN
-			NULL;
+        WHEN no_data_found THEN
+            NULL;
 		WHEN too_many_rows THEN
-			raise_application_error(-20022,'An error was encountered - '||SQLCODE||' -ERROR- '||SQLERRM||'emp_id: '||emp_id);
+			raise_application_error(-20022,'An error was encountered - '
+                ||SQLCODE||' -ERROR- '||SQLERRM);
+
 	END;
 	
 -- One sys admin and lab direct per lab
 	insert into F15E3_Employee( 
     	employee_name,
-    	employee_lab,
     	employee_email,
     	employee_office,
     	employee_phone,
@@ -57,11 +59,9 @@ BEGIN
     	status_eff_date,
     	F15E3_Auth_auth_id,
    	 	F15E3_Lab_lab_id,
-    	F15E3_Emp_Type_emp_type,
-    	F15E3_Emp_Type_emp_type1)
+    	F15E3_Emp_Type_emp_type)
 		 VALUES ( 
 		:NEW.employee_name,
-		:NEW.employee_lab,
 		:NEW.employee_email,
 		:NEW.employee_office,
 		:NEW.employee_phone,
@@ -69,8 +69,7 @@ BEGIN
 		:NEW.status_eff_date,
 		:NEW.F15E3_Auth_auth_id,
 		:NEW.F15E3_Lab_lab_id,
-		:NEW.F15E3_Emp_Type_emp_type,
-		:NEW.F15E3_Emp_Type_emp_type1) ;
+		:NEW.F15E3_Emp_Type_emp_type) ;
 END;
 /
 
@@ -92,7 +91,11 @@ END;
 /
 
 create view F15E3_RFE_create_view as
-SELECT *
+SELECT rfe_id, 
+        F15E3_Status_status_id, 
+        explanation,
+        alt_protections, 
+        approval_review_date
 FROM F15E3_RFE;
 
 CREATE OR REPLACE TRIGGER F15E3_RFE_create_view_trigger
