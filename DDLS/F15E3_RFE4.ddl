@@ -35,8 +35,9 @@ BEGIN
 
         -- CASE: One Executive Director or Secuirty Chairperson
         IF(emp_id IS NOT NULL) THEN
-            raise_application_error(-20022,'An error was encountered - '
-                ||SQLCODE||' -ERROR- '||SQLERRM||'emp_id: '||emp_id);
+            raise_application_error(-20022,'Employee with id '||emp_id
+                ||' is already a '||:NEW.F15E3_Emp_Type_emp_type||'. Please remove employee before trying to add another '
+                ||:NEW.F15E3_Emp_Type_emp_type||'.');
         END IF;
 
         -- CASE: Too many executive directors/security chairperson
@@ -49,33 +50,44 @@ BEGIN
 
 	END;
 	
--- One sys admin and lab direct per lab
-	insert into F15E3_Employee( 
-    	employee_name,
-    	employee_email,
-    	employee_office,
-    	employee_phone,
-    	employee_status,
-    	status_eff_date,
-    	F15E3_Auth_auth_id,
-   	 	F15E3_Lab_lab_id,
-    	F15E3_Emp_Type_emp_type)
-		 VALUES ( 
-		:NEW.employee_name,
-		:NEW.employee_email,
-		:NEW.employee_office,
-		:NEW.employee_phone,
-		:NEW.employee_status,
-		:NEW.status_eff_date,
-		:NEW.F15E3_Auth_auth_id,
-		:NEW.F15E3_Lab_lab_id,
-		:NEW.F15E3_Emp_Type_emp_type) ;
+    DECLARE
+    status_eff_date DATE;
+    BEGIN
+        IF (:NEW.status_eff_date IS NULL)THEN
+            status_eff_date := localtimestamp;
+        ELSE
+            status_eff_date := :NEW.status_eff_date;
+        END IF;
+    -- One sys admin and lab direct per lab
+        insert into F15E3_Employee( 
+            employee_name,
+            employee_email,
+            employee_office,
+            employee_phone,
+            employee_status,
+            status_eff_date,
+            F15E3_Auth_auth_id,
+            F15E3_Lab_lab_id,
+            F15E3_Emp_Type_emp_type)
+             VALUES ( 
+            :NEW.employee_name,
+            :NEW.employee_email,
+            :NEW.employee_office,
+            :NEW.employee_phone,
+            :NEW.employee_status,
+            status_eff_date,
+            :NEW.F15E3_Auth_auth_id,
+            :NEW.F15E3_Lab_lab_id,
+            :NEW.F15E3_Emp_Type_emp_type) ;
+            END;
+
 END;
 /
 
 create view F15E3_Lab_view as
 SELECT 
     lab_id,
+    lab_code,
     name
 FROM F15E3_Lab;
 
@@ -84,8 +96,10 @@ create or replace TRIGGER F15E3_Lab_trigger
      FOR EACH ROW
 BEGIN
     insert into F15E3_Lab( 
+        lab_code,
 		name)
 		 VALUES ( 
+        :NEW.lab_code,
 		:NEW.name) ;
 END;
 /
