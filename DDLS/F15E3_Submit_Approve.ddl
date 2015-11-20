@@ -47,15 +47,15 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_view_trigger
      WHERE rfe_id = rfe_no;
 
      CASE status_no
-      WHEN 1 THEN
+      WHEN 1 THEN -- Entered -> Submitted
          status_no := 2;
-      WHEN 2 THEN
+      WHEN 2 THEN -- Submitted -> SA Approved
          status_no := 6;
-      WHEN 6 THEN
+      WHEN 6 THEN -- SA Approved -> LD Approval
          status_no := 7;
-      WHEN 7 THEN
+      WHEN 7 THEN -- LD Approval -> CH Approval
          status_no := 8;
-      WHEN 8 THEN
+      WHEN 8 THEN -- CH Approval -> Final Approved
          status_no := 9;
      END;
 
