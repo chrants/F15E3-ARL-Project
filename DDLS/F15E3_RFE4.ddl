@@ -119,6 +119,7 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_create_view_trigger
      lab_no NUMBER;
    BEGIN
      rfe_no := F15E3_RFE_seq.nextval;
+     
      INSERT INTO F15E3_RFE(
      	rfe_id, 
      	F15E3_Status_status_id, 
