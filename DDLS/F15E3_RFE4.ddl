@@ -1,3 +1,5 @@
+drop view F15E3_Employee_view;
+
 create view F15E3_Employee_view as
 SELECT 
     employee_id,
@@ -7,10 +9,11 @@ SELECT
     employee_phone,
     employee_status,
     status_eff_date,
-    F15E3_Auth_auth_id,
+    a.right_level as auth_level,
     F15E3_Lab_lab_id,
     F15E3_Emp_Type_emp_type
-FROM F15E3_Employee;
+FROM F15E3_Employee e JOIN F15E3_Auth a
+ON e.employee_id = a.F15E3_Employee_employee_id;
 
 create or replace TRIGGER F15E3_Employee_trigger
      INSTEAD OF insert ON F15E3_Employee_view
@@ -52,14 +55,25 @@ BEGIN
 	
     DECLARE
     status_eff_date DATE;
+    auth_level VARCHAR2 (4000);
+    emp_no NUMBER;
+    auth_no NUMBER;
     BEGIN
-        IF (:NEW.status_eff_date IS NULL)THEN
+    emp_no := F15E3_Employee_seq.nextval;
+    auth_no := F15E3_Auth_seq.nextval;
+        IF (:NEW.status_eff_date IS NULL) THEN
             status_eff_date := localtimestamp;
         ELSE
             status_eff_date := :NEW.status_eff_date;
         END IF;
+        IF (:NEW.auth_level IS NULL) THEN
+            auth_level := 'None';
+        ELSE
+            auth_level := :NEW.auth_level;
+        END IF;
     -- One sys admin and lab direct per lab
         insert into F15E3_Employee( 
+            employee_id,
             employee_name,
             employee_email,
             employee_office,
@@ -70,19 +84,31 @@ BEGIN
             F15E3_Lab_lab_id,
             F15E3_Emp_Type_emp_type)
              VALUES ( 
+            emp_no,
             :NEW.employee_name,
             :NEW.employee_email,
             :NEW.employee_office,
             :NEW.employee_phone,
             :NEW.employee_status,
             status_eff_date,
-            :NEW.F15E3_Auth_auth_id,
+            auth_no,
             :NEW.F15E3_Lab_lab_id,
             :NEW.F15E3_Emp_Type_emp_type) ;
-            END;
+
+        insert into F15E3_Auth(
+            auth_id,
+            right_level,
+            F15E3_Employee_employee_id)
+        VALUES (
+            auth_no,
+            auth_level,
+            emp_no);
+        END;
 
 END;
 /
+
+drop view F15E3_Lab_view;
 
 create view F15E3_Lab_view as
 SELECT 
@@ -103,6 +129,8 @@ BEGIN
 		:NEW.name) ;
 END;
 /
+
+drop view F15E3_RFE_create_view;
 
 create view F15E3_RFE_create_view as
 SELECT rfe_id, 
