@@ -1,32 +1,5 @@
--- Submit RFE Trigger - Validate and Update Status/Time ---- Entered -> Submitted state
--- create view F15E3_RFE_submit_view as
--- SELECT rfe_id,
--- FROM F15E3_RFE;
-
--- CREATE OR REPLACE TRIGGER F15E3_RFE_submit_view_trigger
---    INSTEAD OF UPDATE ON F15E3_RFE_submit_view
---    DECLARE
---      rfe_no NUMBER;
---    BEGIN
---      rfe_no := :NEW.rfe_id;
---      UPDATE F15E3_RFE 
---      SET F15E3_Status_status_id = 2 -- 2 Is the 'submitted' status
---      WHERE rfe_id = rfe_no; 
-
---      INSERT INTO F15E3_Status_History(
---       status_history_id, 
---       F15E3_RFE_rfe_id,
---       F15E3_Status_status_id,
---       effective_date,
---       entered_by_emp_id) 
---      VALUES (
---       F15E3_Status_History_seq.nextval, 
---       rfe_no,
---       2,
---       localtimestamp,
---     v('P100_LOGIN_EMP_ID'));
---     END F15E3_RFE_submit_view_trigger;
--- /
+-- View for pushing an RFE along in the review process
+drop view F15E3_RFE_approve_view;
 
 create view F15E3_RFE_approve_view as
 SELECT rfe_id
@@ -75,8 +48,13 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
       localtimestamp,
       v('P100_LOGIN_EMP_ID'));
 
+   -- TODO: Auto email
+
     END F15E3_RFE_approve_trigger;
 /
+
+-- View for Updating the status of an RFE arbitrarily
+drop view F15E3_RFE_status_update_view;
 
 create view F15E3_RFE_status_update_view as
 SELECT rfe_id, F15E3_STATUS_STATUS_ID
@@ -93,7 +71,7 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
      status_no := :NEW.F15E3_Status_status_id;
 
      UPDATE F15E3_RFE 
-     SET F15E3_Status_status_id = status_no -- 2 Is the 'submitted' status
+     SET F15E3_Status_status_id = status_no
      WHERE rfe_id = rfe_no;
 
      INSERT INTO F15E3_Status_History(
@@ -109,5 +87,33 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
       localtimestamp,
       v('P100_LOGIN_EMP_ID'));
 
+    -- TODO: Auto email
+    -- TODO: Auto comment
+
     END F15E3_RFE_stat_update_trigger;
+/
+
+-- View for Duplicating RFEs
+drop view F15E3_RFE_dup_view;
+
+create view F15E3_RFE_dup_view as
+SELECT rfe_id
+FROM F15E3_RFE;
+
+-- Duplicate RFE Trigger - Select RFE and use info to create new RFE
+CREATE OR REPLACE TRIGGER F15E3_RFE_dup_trigger
+   INSTEAD OF INSERT ON F15E3_RFE_dup_view
+   DECLARE
+     rfe_no NUMBER;
+   BEGIN
+     rfe_no := :NEW.rfe_id;
+
+     INSERT INTO F15E3_RFE_create_view(
+        explanation,
+        alt_protections)
+     VALUES (
+        (SELECT explanation FROM F15E3_RFE WHERE rfe_id = rfe_no),
+        (SELECT alt_protections FROM F15E3_RFE WHERE rfe_id = rfe_no));
+
+    END F15E3_RFE_dup_trigger;
 /
