@@ -5,13 +5,13 @@ increment by 1
 nomaxvalue 
 ;
 
-create or replace trigger F15E3_Auth_PK_trig 
-before insert on F15E3_Auth
-for each row 
-begin 
-select F15E3_Auth_seq.nextval into :new.auth_id from dual; 
-end; 
-/
+-- create or replace trigger F15E3_Auth_PK_trig 
+-- before insert on F15E3_Auth
+-- for each row 
+-- begin 
+-- select F15E3_Auth_seq.nextval into :new.auth_id from dual; 
+-- end; 
+-- /
 alter table F15E3_Auth add created date ; 
 alter table F15E3_Auth add created_by VARCHAR2 (255) ; 
 alter table F15E3_Auth add row_version_number integer ; 
@@ -153,13 +153,13 @@ increment by 1
 nomaxvalue 
 ;
 
-create or replace trigger F15E3_Employee_PK_trig 
-before insert on F15E3_Employee
-for each row 
-begin 
-select F15E3_Employee_seq.nextval into :new.employee_id from dual; 
-end; 
-/
+-- create or replace trigger F15E3_Employee_PK_trig 
+-- before insert on F15E3_Employee
+-- for each row 
+-- begin 
+-- select F15E3_Employee_seq.nextval into :new.employee_id from dual; 
+-- end; 
+-- /
 alter table F15E3_Employee add created date ; 
 alter table F15E3_Employee add created_by VARCHAR2 (255) ; 
 alter table F15E3_Employee add row_version_number integer ; 
