@@ -66,6 +66,7 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
    DECLARE
      rfe_no NUMBER;
      status_no NUMBER;
+     comment_text VARCHAR2(4000);
    BEGIN
      rfe_no := :NEW.rfe_id;
      status_no := :NEW.F15E3_Status_status_id;
@@ -88,7 +89,29 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
       v('P100_LOGIN_EMP_ID'));
 
     -- TODO: Auto email
-    -- TODO: Auto comment
+
+    -- Auto comment
+    SELECT ((SELECT description FROM F15E3_Status 
+               WHERE status_id = status_no) 
+            || ' Automatic comment by ' 
+            || (SELECT employee_name FROM F15E3_Employee 
+                  WHERE employee_id = v('P100_LOGIN_EMP_ID'))
+            || ' at ' || localtimestamp || '.')
+    INTO comment_text
+    FROM Dual;
+
+    INSERT INTO F15E3_Comment (
+      comment_id,
+      F15E3_RFE_rfe_id,
+      entered_by_emp_id,
+      comment_entry_date,
+      comment_body)
+    VALUES (
+      F15E3_Comment_seq.nextval,
+      rfe_no,
+      v('P100_LOGIN_EMP_ID'),
+      localtimestamp,
+      comment_text);
 
     END F15E3_RFE_stat_update_trigger;
 /
