@@ -480,7 +480,7 @@ END;
 drop view F15E3_RFE_Search_Edit_view;
 
 create view F15E3_RFE_Search_Edit_view as
-    SELECT rfe.RFE_ID AS "RFE ID", 
+    SELECT UNIQUE rfe.RFE_ID AS "RFE ID", 
         emp.employee_name AS Requestor, 
         get_lab_code(emp.F15E3_Lab_lab_id) AS Lab,
         status_name(rfe.F15E3_Status_status_id) AS Status, 
