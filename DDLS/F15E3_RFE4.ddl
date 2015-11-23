@@ -289,7 +289,11 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
       status_no := 8; -- LD Approval -> CH Approval
      ELSIF status_no = 8 THEN 
       status_no := 9; -- CH Approval -> Final Approved
+     ELSE
+      status_no := -1;
      END IF;
+
+     IF status_no <> -1 THEN
 
      UPDATE F15E3_RFE 
      SET F15E3_Status_status_id = status_no -- 2 Is the 'submitted' status
@@ -309,6 +313,8 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
       v('P100_LOGIN_EMP_ID'));
 
    -- TODO: Auto email
+
+     END IF;
 
     END F15E3_RFE_approve_trigger;
 /
@@ -525,36 +531,3 @@ create view F15E3_RFE_Contacts_view as
         effective_date,
         comments
     FROM F15E3_RFE_Contacts;
-
-
--- BAD
--- F15E3_RFE_seq;
--- drop sequence RFE_ID;
--- create sequence dept_deptno
--- start with 60
--- increment by 1
--- nomaxvalue;
-
--- drop view dept_view ;
-
--- create view dept_view as
--- SELECT *
--- FROM dept ;
-
--- CREATE OR REPLACE TRIGGER dept_view_trigger
---    INSTEAD OF INSERT ON dept_view
---    DECLARE
---      deptno NUMBER;
---    BEGIN
---      deptno := dept_deptno.nextval;
---      INSERT INTO DEPT(DEPTNO, DNAME, LOC) VALUES (
---         deptno,
---         :NEW.DNAME,
---         :NEW.LOC
---      );
---      INSERT INTO EMP(EMPNO, DEPTNO) VALUES (10, deptno);
---    END dept_view_trigger;
--- /
-
--- insert into dept_view(DEPTNO, DNAME, LOC) VALUES (60, 'New_Dept', 'Austin');
-
