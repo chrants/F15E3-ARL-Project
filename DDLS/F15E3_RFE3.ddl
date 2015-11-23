@@ -233,13 +233,13 @@ increment by 1
 nomaxvalue 
 ;
 
-create or replace trigger F15E3_RFE_PK_trig 
-before insert on F15E3_RFE
-for each row 
-begin 
-select F15E3_RFE_seq.nextval into :new.rfe_id from dual; 
-end; 
-/
+-- create or replace trigger F15E3_RFE_PK_trig 
+-- before insert on F15E3_RFE
+-- for each row 
+-- begin 
+-- select F15E3_RFE_seq.nextval into :new.rfe_id from dual; 
+-- end; 
+-- /
 alter table F15E3_RFE add created date ; 
 alter table F15E3_RFE add created_by VARCHAR2 (255) ; 
 alter table F15E3_RFE add row_version_number integer ; 
