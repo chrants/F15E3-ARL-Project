@@ -1,5 +1,3 @@
-drop view F15E3_Employee_view;
-
 create view F15E3_Employee_view as
 SELECT 
     employee_id,
@@ -9,7 +7,7 @@ SELECT
     employee_phone,
     employee_status,
     status_eff_date,
-    a.right_level as auth_level,
+    F15E3_Auth_auth_id,
     F15E3_Lab_lab_id,
     l.lab_code as lab_code,
     l.name as lab_name,
@@ -59,25 +57,14 @@ BEGIN
 	
     DECLARE
     status_eff_date DATE;
-    auth_level VARCHAR2 (4000);
-    emp_no NUMBER;
-    auth_no NUMBER;
     BEGIN
-    emp_no := F15E3_Employee_seq.nextval;
-    auth_no := F15E3_Auth_seq.nextval;
-        IF (:NEW.status_eff_date IS NULL) THEN
+        IF (:NEW.status_eff_date IS NULL)THEN
             status_eff_date := localtimestamp;
         ELSE
             status_eff_date := :NEW.status_eff_date;
         END IF;
-        IF (:NEW.auth_level IS NULL) THEN
-            auth_level := 'None';
-        ELSE
-            auth_level := :NEW.auth_level;
-        END IF;
     -- One sys admin and lab direct per lab
         insert into F15E3_Employee( 
-            employee_id,
             employee_name,
             employee_email,
             employee_office,
@@ -88,31 +75,19 @@ BEGIN
             F15E3_Lab_lab_id,
             F15E3_Emp_Type_emp_type)
              VALUES ( 
-            emp_no,
             :NEW.employee_name,
             :NEW.employee_email,
             :NEW.employee_office,
             :NEW.employee_phone,
             :NEW.employee_status,
             status_eff_date,
-            auth_no,
+            :NEW.F15E3_Auth_auth_id,
             :NEW.F15E3_Lab_lab_id,
             :NEW.F15E3_Emp_Type_emp_type) ;
-
-        insert into F15E3_Auth(
-            auth_id,
-            right_level,
-            F15E3_Employee_employee_id)
-        VALUES (
-            auth_no,
-            auth_level,
-            emp_no);
-        END;
+            END;
 
 END;
 /
-
-drop view F15E3_Lab_view;
 
 create view F15E3_Lab_view as
 SELECT 
@@ -134,8 +109,6 @@ BEGIN
 END;
 /
 
-drop view F15E3_RFE_create_view;
-
 create view F15E3_RFE_create_view as
 SELECT rfe_id, 
         F15E3_Status_status_id, 
@@ -151,7 +124,6 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_create_view_trigger
      lab_no NUMBER;
    BEGIN
      rfe_no := F15E3_RFE_seq.nextval;
-     
      INSERT INTO F15E3_RFE(
      	rfe_id, 
      	F15E3_Status_status_id, 
@@ -258,6 +230,149 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_create_view_trigger
      	localtimestamp,
 		''); -- What to put for comment?
    END F15E3_RFE_create_view_trigger;
+/
+
+-- View for pushing an RFE along in the review process
+drop view F15E3_RFE_approve_view;
+
+create view F15E3_RFE_approve_view as
+SELECT rfe_id
+FROM F15E3_RFE;
+
+-- Approve RFE Trigger - Update Status/Time
+CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
+   INSTEAD OF UPDATE ON F15E3_RFE_approve_view
+   DECLARE
+     rfe_no NUMBER;
+     status_no NUMBER;
+   BEGIN
+     rfe_no := :NEW.rfe_id;
+
+     SELECT F15E3_Status_status_id 
+     INTO status_no
+     FROM F15E3_RFE
+     WHERE rfe_id = rfe_no;
+
+     IF status_no = 1 THEN
+      status_no := 2;-- Entered -> Submitted
+     ELSIF status_no = 2 THEN
+      status_no := 6; -- Submitted -> SA Approved
+     ELSIF status_no = 6 THEN 
+      status_no := 7; -- SA Approved -> LD Approval
+     ELSIF status_no = 7 THEN 
+      status_no := 8; -- LD Approval -> CH Approval
+     ELSIF status_no = 8 THEN 
+      status_no := 9; -- CH Approval -> Final Approved
+     END IF;
+
+     UPDATE F15E3_RFE 
+     SET F15E3_Status_status_id = status_no -- 2 Is the 'submitted' status
+     WHERE rfe_id = rfe_no;
+
+     INSERT INTO F15E3_Status_History(
+      status_history_id, 
+      F15E3_RFE_rfe_id,
+      F15E3_Status_status_id,
+      effective_date,
+      entered_by_emp_id) 
+     VALUES (
+      F15E3_Status_History_seq.nextval, 
+      rfe_no,
+      status_no,
+      localtimestamp,
+      v('P100_LOGIN_EMP_ID'));
+
+   -- TODO: Auto email
+
+    END F15E3_RFE_approve_trigger;
+/
+
+-- View for Updating the status of an RFE arbitrarily
+drop view F15E3_RFE_status_update_view;
+
+create view F15E3_RFE_status_update_view as
+SELECT rfe_id, F15E3_STATUS_STATUS_ID
+FROM F15E3_RFE;
+
+-- Reject/Recall/Return RFE Trigger - Update Status/Time
+CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
+   INSTEAD OF UPDATE ON F15E3_RFE_status_update_view
+   DECLARE
+     rfe_no NUMBER;
+     status_no NUMBER;
+     comment_text VARCHAR2(4000);
+   BEGIN
+     rfe_no := :NEW.rfe_id;
+     status_no := :NEW.F15E3_Status_status_id;
+
+     UPDATE F15E3_RFE 
+     SET F15E3_Status_status_id = status_no
+     WHERE rfe_id = rfe_no;
+
+     INSERT INTO F15E3_Status_History(
+      status_history_id, 
+      F15E3_RFE_rfe_id,
+      F15E3_Status_status_id,
+      effective_date,
+      entered_by_emp_id) 
+     VALUES (
+      F15E3_Status_History_seq.nextval, 
+      rfe_no,
+      status_no,
+      localtimestamp,
+      v('P100_LOGIN_EMP_ID'));
+
+    -- TODO: Auto email
+
+    -- Auto comment
+    SELECT ((SELECT description FROM F15E3_Status 
+               WHERE status_id = status_no) 
+            || ' Automatic comment by ' 
+            || (SELECT employee_name FROM F15E3_Employee 
+                  WHERE employee_id = v('P100_LOGIN_EMP_ID'))
+            || ' at ' || localtimestamp || '.')
+    INTO comment_text
+    FROM Dual;
+
+    INSERT INTO F15E3_Comment (
+      comment_id,
+      F15E3_RFE_rfe_id,
+      entered_by_emp_id,
+      comment_entry_date,
+      comment_body)
+    VALUES (
+      F15E3_Comment_seq.nextval,
+      rfe_no,
+      v('P100_LOGIN_EMP_ID'),
+      localtimestamp,
+      comment_text);
+
+    END F15E3_RFE_stat_update_trigger;
+/
+
+-- View for Duplicating RFEs
+drop view F15E3_RFE_dup_view;
+
+create view F15E3_RFE_dup_view as
+SELECT rfe_id
+FROM F15E3_RFE;
+
+-- Duplicate RFE Trigger - Select RFE and use info to create new RFE
+CREATE OR REPLACE TRIGGER F15E3_RFE_dup_trigger
+   INSTEAD OF INSERT ON F15E3_RFE_dup_view
+   DECLARE
+     rfe_no NUMBER;
+   BEGIN
+     rfe_no := :NEW.rfe_id;
+
+     INSERT INTO F15E3_RFE_create_view(
+        explanation,
+        alt_protections)
+     VALUES (
+        (SELECT explanation FROM F15E3_RFE WHERE rfe_id = rfe_no),
+        (SELECT alt_protections FROM F15E3_RFE WHERE rfe_id = rfe_no));
+
+    END F15E3_RFE_dup_trigger;
 /
 
 -- BAD
