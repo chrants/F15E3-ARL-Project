@@ -490,10 +490,10 @@ create view F15E3_RFE_Search_Edit_view as
     alt_protections,
     approval_review_date
     FROM F15E3_RFE rfe
-    LEFT JOIN F15E3_Comment comm ON rfe.RFE_ID = comm.F15E3_RFE_rfe_id AND comm.comment_id = latest_comment(rfe.RFE_ID)
+        LEFT JOIN F15E3_Comment comm ON rfe.RFE_ID = comm.F15E3_RFE_rfe_id AND comm.comment_id = latest_comment(rfe.RFE_ID)
         INNER JOIN F15E3_RFE_Contacts con ON con.F15E3_RFE_rfe_id = rfe.RFE_ID AND con.role_id = '1' -- requestor
         INNER JOIN F15E3_Employee emp ON con.F15E3_Employee_employee_id = emp.employee_id
-        INNER JOIN F15E3_Status_History stat_his ON stat_his.F15E3_Status_status_id = rfe.F15E3_Status_status_id;
+        INNER JOIN F15E3_Status_History stat_his ON stat_his.F15E3_RFE_rfe_id = rfe.RFE_ID AND stat_his.F15E3_Status_status_id = rfe.F15E3_Status_status_id;
 
 drop function role_name;
 
