@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="52819014-397B-0604-3AE3-9174284D6A54" name="F15E3 Comment">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>E155C8E6-424B-A773-611F-81516A58FAF4</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="comment id" id="EB739C8A-A740-8377-BF0A-2DFEE7E392A9">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>60525745-18D3-C7D3-90AA-64C9AB251614</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15E3 RFE rfe id" id="98D3C630-40F3-CE12-C52F-92B1E3EE73BA">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>913599AB-D10C-C2B5-14D8-9C23D759F32C</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>C5C8C907-3A32-FF0E-9D4A-6947EF9D3062</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comment entry date" id="F2FD6653-432A-2E39-4024-F6691E09F16E">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>C000FC7C-99CC-4E38-CB22-DA3B96D2C843</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comment body" id="2FC9B0AE-F20E-C0D4-3A18-358EBF97B6BE">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>267CA653-17DC-3E05-EADD-5E03AD819044</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entered by emp id2" id="3C96A4C2-F659-E476-35E6-0D13F3075F6F">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:33:20 UTC</createdTime>
+<generatorID>13FF227D-C724-3D9A-7F7D-BFC44BD875F0</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5B555426-298C-76CB-1EDC-D2E925E8942D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="64616AF1-A2E6-A20A-1558-19DB24BC1868" name="F15E3 Comment PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>C8593441-B0A2-B038-1A03-2DE15F0FE043</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EB739C8A-A740-8377-BF0A-2DFEE7E392A9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

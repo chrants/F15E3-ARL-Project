@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="92DDAB5F-4D3C-9EBE-8AE0-F9C2E01EF93F" name="F15E3 Emp Type">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>37D5544C-FDCD-1D24-2F74-9377C1445BF1</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="emp type" id="819936C7-0171-F4B8-5BFE-33205B17E55E">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>94DD6FF7-48D2-7959-D4D6-AF45A139CC9E</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="ED97EC3D-B3D1-F080-5B4C-C4EB46559D41" name="F15E3 Emp Type PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>030CDAAC-F43F-485C-B243-F2431649125E</generatorID>
+<ownerDesignName>RFE Logical Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>819936C7-0171-F4B8-5BFE-33205B17E55E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
