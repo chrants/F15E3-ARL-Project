@@ -272,7 +272,7 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
      rfe_no NUMBER;
      status_no NUMBER;
    BEGIN
-     rfe_no := :NEW.rfe_id;
+     rfe_no := :OLD.rfe_id;
 
      SELECT F15E3_Status_status_id 
      INTO status_no
@@ -334,7 +334,7 @@ CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
      status_no NUMBER;
      comment_text VARCHAR2(4000);
    BEGIN
-     rfe_no := :NEW.rfe_id;
+     rfe_no := :OLD.rfe_id;
      status_no := :NEW.F15E3_Status_status_id;
 
      UPDATE F15E3_RFE 
