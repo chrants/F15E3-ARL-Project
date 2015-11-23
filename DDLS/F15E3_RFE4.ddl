@@ -1,3 +1,5 @@
+drop view F15E3_Employee_view;
+
 create view F15E3_Employee_view as
 SELECT 
     employee_id,
@@ -89,6 +91,8 @@ BEGIN
 END;
 /
 
+drop view F15E3_Lab_view;
+
 create view F15E3_Lab_view as
 SELECT 
     lab_id,
@@ -108,6 +112,8 @@ BEGIN
 		:NEW.name) ;
 END;
 /
+
+drop view F15E3_RFE_create_view;
 
 create view F15E3_RFE_create_view as
 SELECT rfe_id, 
