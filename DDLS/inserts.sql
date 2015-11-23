@@ -26,8 +26,7 @@ insert into F15E3_Employee_view (employee_id, employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values (1001, 'Dwyane Wade', 'dwade@gmail.com', 'M101', 512-555-1234, 'A', '25-AUG-2015
-			', 'view', 1, 'Lab Director');
+	values (1001, 'Dwyane Wade', 'dwade@gmail.com', 'M101', 512-555-1234, 'A', '25-AUG-2015', 'view', 1, 'Lab Director');
 
 insert into F15E3_Employee_view (employee_id, employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
