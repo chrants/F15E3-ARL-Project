@@ -21,13 +21,13 @@ ALTER TABLE Distributor ADD CONSTRAINT Distributor_PK PRIMARY KEY ( distributor_
 CREATE TABLE Movie
   (
     movie_id                   INTEGER NOT NULL ,
-    title                      VARCHAR2 (255) NOT NULL ,
+    title                      VARCHAR2 (255) NOT NULL,
     release_date               VARCHAR2 (255) NOT NULL,
-    rating                     VARCHAR2 (255) NOT NULL ,
+    rating                     VARCHAR2 (255) NOT NULL,
     total_gross                INTEGER ,
     inflation_gross            INTEGER ,
     Distributor_distributor_id INTEGER ,
-    genre                      VARCHAR2 (255)
+    genre                      VARCHAR2 (255) NOT NULL
   ) ;
 ALTER TABLE Movie ADD CONSTRAINT Movie_PK PRIMARY KEY ( movie_id ) ;
 
