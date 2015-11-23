@@ -1,6 +1,6 @@
 DELETE FROM F15E3_Lab;
 
-DELETE FROM F15E3_Employee_view;
+DELETE FROM F15E3_Employee;
 
 DELETE FROM F15E3_Comment;
 
@@ -92,56 +92,77 @@ insert into F15E3_Employee_view (employee_id, employee_name, employee_email,
 	values (1011, ' Jason Terry', 'jasont@gmail.com', 'M110', 512-555-1267, 'A', '09-AUG-2015
 			09:30am', 'none', 3, 'Security Chairperson');
 
---comment table
-insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
-						comment_entry_date, comment_body)
-	values (1, , , '25-AUG-2015 08:00am', 'The work was correctly and on time.');
 
 --rfe table
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 1, 'Firewall exception needed to access site.','Protected files should be pass in.',
+	values (100, 1, 'Firewall exception needed to access site.','Protected files should be pass in.',
 			'25-AUG-2016 08:00am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 2, 'The RFE should be review then a decidion need to be made','A decision need to be made.',
+	values (101, 2, 'The RFE should be review then a decidion need to be made','A decision need to be made.',
 			'20-AUG-2016 08:00am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 3, 'The data was returned. More information needed','ALT protection should provide more details.',
+	values (102, 3, 'The data was returned. More information needed','ALT protection should provide more details.',
 			'13-AUG-2016 09:30am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 4, 'The request was recalled. It has not reach the final approval.','Need to commit the changes and resubmit.',
+	values (103, 4, 'The request was recalled. It has not reach the final approval.','Need to commit the changes and resubmit.',
 			'10-AUG-2016 08:15am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 5, 'The files did not reach all the required data.','The data should not be returned',
+	values (104 , 5, 'The files did not reach all the required data.','The data should not be returned',
 			'27-AUG-2016 10:00am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 6, 'Enable data review required.','SA approved so the data can be view.',
+	values (105, 6, 'Enable data review required.','SA approved so the data can be view.',
 			'14-AUG-2016 09:10am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 7, 'Password enablement can limit access','Lab director need to approved.',
+	values (106, 7, 'Password enablement can limit access','Lab director need to approved.',
 			'11-AUG-2016 11:00am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 8, 'Password field should be enable','ALT Security should be considered.',
+	values (107, 8, 'Password field should be enable','ALT Security should be considered.',
 			'18-AUG-2016 08:45am');
 
 insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
-	values ( , 9, 'Need to check the all privious appros','All access need to be granted permissions.',
+	values (108, 9, 'Need to check the all privious appros','All access need to be granted permissions.',
 			'24-AUG-2016 11:05am');
+
+--comment table
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (1, 107, 1011, '25-AUG-2015 08:00am', 'The RFE form was correctly and on time.');
+
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (2, 106, 1010, '20-AUG-2015 09:00am', 'Little messy but the work is acceptable.');
+
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (3, 105, 1009, '21-AUG-2015 10:00am', 'RFE form was submitted.');
+
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (4, 104, 1008, '16-AUG-2015 11:00am', 'The report highlights some intersting information');
+
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (5, 103, 1007, '19-AUG-2015 11:030am', 'RFE form was submitted');
+
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (6, 102, 1006, '08-AUG-2015 10:08am', 'Little messy but the work is acceptable.');
 
 
 
