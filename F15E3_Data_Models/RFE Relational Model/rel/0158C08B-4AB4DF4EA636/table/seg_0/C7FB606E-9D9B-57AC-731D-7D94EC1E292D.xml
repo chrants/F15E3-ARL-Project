@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C7FB606E-9D9B-57AC-731D-7D94EC1E292D" name="F15E3_Comment">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>52819014-397B-0604-3AE3-9174284D6A54</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="comment_id" id="7D92859A-7AEA-759E-A2EE-14A6050EADBE">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>EB739C8A-A740-8377-BF0A-2DFEE7E392A9</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15E3_RFE_rfe_id" id="B5BB63D8-73BE-1139-4BC9-352FEB492D3F">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>98D3C630-40F3-CE12-C52F-92B1E3EE73BA</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C546BEF3-0E58-E1D6-C111-206D08A3FC42" referredColumn="8DAE080E-A080-C54F-FFB5-424A9A5A7BCB"/>
+</associations>
+</Column>
+<Column name="comment_entry_date" id="D958341B-7706-1314-3AE9-5B9C02A8FC90">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>F2FD6653-432A-2E39-4024-F6691E09F16E</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comment_body" id="D2C1B7F9-F6CD-4334-83B4-029C7C12B46A">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>2FC9B0AE-F20E-C0D4-3A18-358EBF97B6BE</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15E3_Employee_employee_id" id="87EB178B-9713-0E59-BE95-9E8C6B7879BA">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>3C96A4C2-F659-E476-35E6-0D13F3075F6F</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5C9A755-4193-1807-C632-CAED50A32EC0" referredColumn="D7BEE74B-7328-3078-E99F-DA499FF40C7D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C380EBA-083F-6981-6D3B-E54496AC636E" name="F15E3_Comment_PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>64616AF1-A2E6-A20A-1558-19DB24BC1868</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D92859A-7AEA-759E-A2EE-14A6050EADBE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B9239808-9062-3F78-877A-57A6B6731373" name="F15E3_Comment_F15E3_RFE_FK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>913599AB-D10C-C2B5-14D8-9C23D759F32C</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B5BB63D8-73BE-1139-4BC9-352FEB492D3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4FA5052-BB64-99B1-39BD-0B77DD009E14" name="F15E3_Comment_F15E3_Employee_FK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>13FF227D-C724-3D9A-7F7D-BFC44BD875F0</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="87EB178B-9713-0E59-BE95-9E8C6B7879BA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

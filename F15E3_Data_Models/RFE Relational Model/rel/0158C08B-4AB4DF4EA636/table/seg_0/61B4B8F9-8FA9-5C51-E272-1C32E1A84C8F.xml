@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="61B4B8F9-8FA9-5C51-E272-1C32E1A84C8F" name="F15E3_RFE">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>A710E209-E8C2-4AEE-129F-FE1D1E821002</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="rfe_id" id="8DAE080E-A080-C54F-FFB5-424A9A5A7BCB">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>C5C8C907-3A32-FF0E-9D4A-6947EF9D3062</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="F15E3_Status_status_id" id="27085235-14B1-9347-EFD8-C320DAA4990D">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>4E011C81-2754-92EB-F407-9DA6D2739B81</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="42604479-32E0-4C6E-DF3B-423478995507" referredColumn="12FE7855-D8B5-D99C-235B-0A7999D94BEF"/>
+</associations>
+</Column>
+<Column name="explanation" id="5EB603C6-0663-46E4-AA4D-B20C6BDA3969">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>EB9540A6-799E-EFB9-6EB2-C87E73EE3293</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="alt_protections" id="D5A901A6-7E7D-AC50-05A4-F8B758093260">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>90062495-71FA-DDB8-9F08-53B0903FC89E</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="approval_review_date" id="55C4ECDF-DE6F-A841-A9F0-595C0A816401">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>CE6B65C3-E074-63C2-89FF-9A584AD80168</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA6E4722-09FF-D703-A879-055B7DC4806B" name="F15E3_RFE_PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>A55F7B7D-9F5A-45E2-59C5-1380C69652D6</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8DAE080E-A080-C54F-FFB5-424A9A5A7BCB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D56DB16B-395C-0AA4-A686-8C8AF5BBDB63" name="F15E3_RFE_F15E3_Status_FK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>122EE391-7556-ECBD-1310-612F88C58FCB</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="27085235-14B1-9347-EFD8-C320DAA4990D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

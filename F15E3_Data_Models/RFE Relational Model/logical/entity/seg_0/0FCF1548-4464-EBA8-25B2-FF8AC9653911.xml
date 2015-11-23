@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0FCF1548-4464-EBA8-25B2-FF8AC9653911" name="F15E3 RFE Contacts">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>557F5ED6-BA16-852D-07B9-B580098B233A</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="F15E3 RFE rfe id" id="50F2961B-2044-796E-29FA-CE5CA02C90D9">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>40DF792D-994A-6EB9-D0F9-719D4C67A75D</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<referedAttribute>C5C8C907-3A32-FF0E-9D4A-6947EF9D3062</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="F15E3 Employee employee id" id="B463CD74-ED1A-E982-B0F3-AF23708DCA80">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>D48C69BB-263B-0208-8747-888E3B6DC717</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<referedAttribute>5B555426-298C-76CB-1EDC-D2E925E8942D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="effective date" id="9BA452C6-2B0C-03CA-47E2-F94DF098AB9E">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>69DB5EF3-EB2E-5825-93CB-AD24C702105A</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="comments" id="F351F1AE-22D0-C91C-6F3F-EB5E556DAD53">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>AD35E175-9A42-5612-DC76-3B5A4C65AB79</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="role id" id="9D31A0C4-6C03-C065-DA69-8D0C5A064B12">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:19:03 UTC</createdTime>
+<generatorID>F60772DB-8AAC-E80E-51A8-BD1622D28704</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>CE44CD84-68D4-43D5-21F0-8022C66D0AB4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D818AE3A-6980-8BF7-33AB-5EB60BB6E757" name="F15E3 RFE Contacts PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:18:24 UTC</createdTime>
+<generatorID>68E5EBA9-3D36-6334-1F43-420C15A1C7EA</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>50F2961B-2044-796E-29FA-CE5CA02C90D9</attributeRef>
+<attributeRef>B463CD74-ED1A-E982-B0F3-AF23708DCA80</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

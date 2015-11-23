@@ -1,0 +1,215 @@
+--A DML file with insert statements that will add sample data to each table in your application. Here is what the statements in this DML file should be,
+-- Truncate each of the sample data tables using the following statement:
+--truncate table table_name1; -- for example - truncate table dept;
+/*...
+truncate table table_nameN;
+
+-- Disable the PK triggers on the sample data tables using the following statement:
+alter trigger trigger_name1 disable; -- for example - alter trigger DEPT_VIEW_TRIGGER disable;
+...
+alter trigger trigger_nameN disable;
+
+-- Put all of the sample data INSERT statements here. Be sure to use PK and FK values that
+-- are < 100 so that they won't be reapeated by the PK triggers when they are re-enabled.
+
+-- Enable the PK triggers on the sample data tables using the following statement:
+alter trigger trigger_name1 enable; -- for example - alter trigger DEPT_VIEW_TRIGGER enable;
+...
+alter trigger trigger_nameN enable;*/
+
+truncate table F15E3_Auth;
+truncate table F15E3_Comment;
+truncate table F15E3_Document;
+truncate table F15E3_Emp_Type;--
+truncate table F15E3_Employee;
+truncate table F15E3_Lab;--
+truncate table F15E3_RFE;--
+truncate table F15E3_RFE_Contacts;
+truncate table F15E3_RFE_Tasks;
+truncate table F15E3_Role_Type;--
+truncate table F15E3_Status;--
+truncate table F15E3_Status_History;
+truncate table F15E3_Task;
+
+alter trigger F15E3_Auth_PK_trig disable;
+alter trigger F15E3_Comment_PK_trig disable;
+alter trigger F15E3_Document_PK_trig disable;
+alter trigger F15E3_Employee_PK_trig disable;
+alter trigger F15E3_Lab_PK_trig disable;
+alter trigger F15E3_RFE_PK_trig disable;
+alter trigger F15E3_Status_History_PK_trig disable;
+alter trigger F15E3_Task_PK_trig disable;
+
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (1, 'Entered', 'The RFE has been created but has not yet been submitted for approval.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (2, 'Submitted', 'The RFE has been submitted to the Lab System Administrator for approval.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (3, 'Returned', 'The RFE has been returned for further information or clarification. Once Submitted again, it will follow the same routing as an Entered RFE.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (4, 'Recalled', 'The requestor has recalled an RFE that has not yet reached final approval. Once Submitted again, it will follow the same routing as an Entered RFE.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (5, 'Rejected', 'The RFE has been rejected and cannot be implemented.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (6, 'SA Approved', 'The Lab System Administrator has approved the RFE; it has been submitted for Lab Director approval.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (7, 'LD Approval', 'The Lab Director has approved the RFE; it has been submitted for Network Security Panel approval.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (8, 'CH Approval', 'The Lab Director has approved the RFE; it has been submitted to the Chairperson of Security Panel approval.');
+INSERT INTO F15E3_Status (status_id, rfe_status, description)
+VALUES (9, 'Final Approved', 'The Executive Director''s Office has given final approval for the RFE and it may be implemented.');
+
+INSERT INTO F15E3_Role_Type (role_id, role_type, description)
+VALUES (1, 'Requestor', 'The employee who create the RFE');
+INSERT INTO F15E3_Role_Type (role_id, role_type, description)
+VALUES (2, 'FYI Reviewer', 'An employee with peripheral interests; will get automatically notified at certain stages');
+INSERT INTO F15E3_Role_Type (role_id, role_type, description)
+VALUES (3, 'Sys Admin Approver', 'First round approver for new RFE''s in their lab');
+INSERT INTO F15E3_Role_Type (role_id, role_type, description)
+VALUES (4, 'Lab Director Approver', 'Second round approver for new RFE''s in their lab');
+INSERT INTO F15E3_Role_Type (role_id, role_type, description)
+VALUES (5, 'Chairperson Approver', 'Network Security Panel approver');
+INSERT INTO F15E3_Role_Type (role_id, role_type, description)
+VALUES (6, 'Exec Dir Approver', 'Final round approver for all RFE''s');
+
+INSERT INTO F15E3_Emp_Type (emp_type)
+VALUES ('System Admin');
+INSERT INTO F15E3_Emp_Type (emp_type)
+VALUES ('Lab Director');
+INSERT INTO F15E3_Emp_Type (emp_type)
+VALUES ('Security Chairperson');
+INSERT INTO F15E3_Emp_Type (emp_type)
+VALUES ('Executive Director');
+
+insert into F15E3_Lab (lab_code, name)
+	values ('BION', 'Biological Nonmeclature');
+insert into F15E3_Lab (lab_code, name)
+	values ('PHYL', 'PhyloCode');
+insert into F15E3_Lab (lab_code, name)
+	values ('GENE', 'Gene Nonmeclature');
+insert into F15E3_Lab (lab_code, name)
+	values ('REDC', 'Red Cell Nonmeclature');
+insert into F15E3_Lab (lab_code, name)
+	values ('VINO', 'Virus Nonmeclature');
+
+--rfe table
+insert into F15E3_RFE_ (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (100, 1, 'Firewall exception needed to access site.','Protected files should be pass in.',
+			'25-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (101, 2, 'The RFE should be review then a decidion need to be made','A decision need to be made.',
+			'20-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (102, 3, 'The data was returned. More information needed','ALT protection should provide more details.',
+			'13-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (103, 4, 'The request was recalled. It has not reach the final approval.','Need to commit the changes and resubmit.',
+			'10-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (104 , 5, 'The files did not reach all the required data.','The data should not be returned',
+			'27-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (105, 6, 'Enable data review required.','SA approved so the data can be view.',
+			'14-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (106, 7, 'Password enablement can limit access','Lab director need to approved.',
+			'11-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (107, 8, 'Password field should be enable','ALT Security should be considered.',
+			'18-AUG-2016');
+insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+					approval_review_date)
+	values (108, 9, 'Need to check the all privious appros','All access need to be granted permissions.',
+			'24-AUG-2016');
+
+--employee view
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Dwyane Wade', 'dwade@gmail.com', 'M101', '512-1234', 'A', '25-AUG-2015', 'view', 103, 'Lab Director');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Kobe Bryant', 'kobeb@gmail.com', 'M102', '512-1235', 'A', '12-AUG-2015', 'edit', 101, 'System Admin');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Tim Duncan', 'timd@gmail.com', 'M103', '512-1236', 'A', '13-AUG-2015', 'edit', 102, 'Executive Director');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('James Harden', 'jamesh@gmail.com', 'M104', '512-1237', 'A', '14-AUG-2015', 'view', 103, 'System Admin');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Kevin Durant', 'kevind@gmail.com', 'M105', '512-1238', 'A', '17-AUG-2015', 'edit', 104, 'System Admin');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Dwight Howard', 'dhoward@gmail.com', 'M106', '512-1239', 'A', '18-AUG-2015', 'view', 102, 'Lab Director');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Dirk Nowitzki', 'dirkn@gmail.com', 'M107', '512-1265', 'A', '28-AUG-2015', 'view', 103, 'System Admin');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Chris Paul', 'cpaul@gmail.com', 'M108', '512-1212', 'A', '10-AUG-2015', 'edit', 101, 'Lab Director');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Carmelo Anthony', 'carmelo@gmail.com', 'M109', '512-1289', 'A', '11-AUG-2015', 'view', 100, 'Lab Director');
+insert into F15E3_Employee_view (employee_name, employee_email,
+							employee_office, employee_phone, employee_status,
+							status_eff_date, auth_level, F15E3_Lab_lab_id,
+							F15E3_Emp_Type_emp_type )
+	values ('Jason Terry', 'jasont@gmail.com', 'M110', '512-1267', 'A', '09-AUG-2015', 'none', 104, 'Security Chairperson');	
+
+--comment
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (1, 107, 1011, '25-AUG-2015', 'The RFE form was correctly and on time.');
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (2, 106, 1010, '20-AUG-2015', 'Little messy but the work is acceptable.');
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (3, 105, 1009, '21-AUG-2015', 'RFE form was submitted.');
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (4, 104, 1008, '16-AUG-2015', 'The report highlights some intersting information');
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (5, 103, 1007, '19-AUG-2015', 'RFE form was submitted');
+insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
+						comment_entry_date, comment_body)
+	values (6, 102, 1006, '08-AUG-2015', 'Little messy but the work is acceptable.');
+
+alter trigger F15E3_Auth_PK_trig enable;
+alter trigger F15E3_Comment_PK_trig enable;
+alter trigger F15E3_Document_PK_trig enable;
+alter trigger F15E3_Employee_PK_trig enable;
+alter trigger F15E3_Lab_PK_trig enable;
+alter trigger F15E3_RFE_PK_trig enable;
+alter trigger F15E3_Status_History_PK_trig enable;
+alter trigger F15E3_Task_PK_trig enable;
+
+
+

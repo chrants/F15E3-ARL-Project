@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Approver" directorySegmentName="seg_0" id="DAFBC255-9AC8-5CEA-68C8-359D4435BB7D">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:58:30 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>FC46103C-8E3E-6487-F822-691E3EA72677</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>716C834D-01BD-22DF-4AB7-78FB62300BDD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

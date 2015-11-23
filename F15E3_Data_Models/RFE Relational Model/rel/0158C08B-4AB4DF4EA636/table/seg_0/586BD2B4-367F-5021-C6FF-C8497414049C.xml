@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="586BD2B4-367F-5021-C6FF-C8497414049C" name="F15E3_Emp_Type">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>92DDAB5F-4D3C-9EBE-8AE0-F9C2E01EF93F</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="emp_type" id="6EB9140F-4EC7-DD42-CFBF-80778E4A8FE2">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>819936C7-0171-F4B8-5BFE-33205B17E55E</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5D344B8D-650C-837A-026B-850A126F47E9" name="F15E3_Emp_Type_PK">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:39:29 UTC</createdTime>
+<generatorID>ED97EC3D-B3D1-F080-5B4C-C4EB46559D41</generatorID>
+<ownerDesignName>RFE Relational Model</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EB9140F-4EC7-DD42-CFBF-80778E4A8FE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

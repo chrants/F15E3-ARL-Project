@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.InheritanceRelation" name="Hierarchy_1" directorySegmentName="seg_0" id="60966079-265B-BF57-6993-722099BBCE34">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 14:05:52 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>Super Type</nameOnSource>
+<nameOnTarget>Sub Type</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceEntity>716C834D-01BD-22DF-4AB7-78FB62300BDD</sourceEntity>
+<targetEntity>C88C8D74-B8C7-CC3C-C8DA-622524FFAA38</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
