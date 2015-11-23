@@ -20,7 +20,9 @@ END;
 drop view F15E3_RFE_Contacts_view;
 
 create view F15E3_RFE_Contacts_view as
-	SELECT rfe_id, 
+	SELECT F15E3_RFE_rfe_id, 
+		F15E3_Employee_employee_id,
+		role_id,
 		emp_name(F15E3_Employee_employee_id) AS "Employee Name",
 		role_name(role_id) AS "Role Name",
 		effective_date,
