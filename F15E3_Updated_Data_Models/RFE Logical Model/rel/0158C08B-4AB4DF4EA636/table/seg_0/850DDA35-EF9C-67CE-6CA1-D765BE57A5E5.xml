@@ -64,6 +64,7 @@
 <createdTime>2015-11-17 22:32:45 UTC</createdTime>
 <generatorID>4AE4A890-E710-2CD3-8808-71045E9E8168</generatorID>
 <ownerDesignName>RFE Logical Model</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
