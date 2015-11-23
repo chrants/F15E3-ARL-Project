@@ -55,6 +55,25 @@ BEGIN
 END;
 /
 
+drop function latest_comment;
+
+CREATE OR REPLACE FUNCTION latest_comment
+(
+  rfe_no INTEGER
+)
+RETURN INTEGER
+IS
+  lat_com INTEGER;
+BEGIN
+  SELECT MAX(comm2.comment_id) 
+  INTO lat_com
+  FROM F15E3_Comment comm2
+  WHERE rfe_no = comm2.F15E3_RFE_rfe_id;
+  
+  RETURN lat_com;
+END;
+/
+
 drop view F15E3_RFE_Search_view;
 
 create view F15E3_RFE_Search_view as
@@ -68,5 +87,4 @@ create view F15E3_RFE_Search_view as
 		INNER JOIN F15E3_RFE_Contacts con ON con.F15E3_RFE_rfe_id = rfe.RFE_ID AND con.role_id = '1' -- requestor
 		INNER JOIN F15E3_Employee emp ON con.F15E3_Employee_employee_id = emp.employee_id
 		INNER JOIN F15E3_Status_History stat_his ON stat_his.F15E3_Status_status_id = rfe.F15E3_Status_status_id
-		LEFT JOIN F15E3_Comment comm ON rfe.RFE_ID = comm.F15E3_RFE_rfe_id
-	WHERE comm.comment_entry_date = (SELECT MAX(comm2.comment_entry_date) FROM F15E3_Comment comm2 WHERE rfe.RFE_ID = comm2.F15E3_RFE_rfe_id);
+		LEFT JOIN F15E3_Comment comm ON rfe.RFE_ID = comm.F15E3_RFE_rfe_id AND comm.comment_id = latest_comment(rfe.RFE_ID);
