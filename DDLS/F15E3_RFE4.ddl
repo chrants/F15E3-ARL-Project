@@ -267,7 +267,7 @@ FROM F15E3_RFE;
 
 -- Approve RFE Trigger - Update Status/Time
 CREATE OR REPLACE TRIGGER F15E3_RFE_approve_trigger
-   INSTEAD OF UPDATE ON F15E3_RFE_approve_view
+   INSTEAD OF INSERT ON F15E3_RFE_approve_view
    DECLARE
      rfe_no NUMBER;
      status_no NUMBER;
@@ -322,7 +322,7 @@ FROM F15E3_RFE;
 
 -- Reject/Recall/Return RFE Trigger - Update Status/Time
 CREATE OR REPLACE TRIGGER F15E3_RFE_stat_update_trigger
-   INSTEAD OF UPDATE ON F15E3_RFE_status_update_view
+   INSTEAD OF INSERT ON F15E3_RFE_status_update_view
    DECLARE
      rfe_no NUMBER;
      status_no NUMBER;
