@@ -93,7 +93,7 @@ insert into F15E3_Lab (lab_code, name)
 	values ('VINO', 'Virus Nonmeclature');
 
 --rfe table
-insert into F15E3_RFE (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
+insert into F15E3_RFE_ (rfe_id, F15E3_Status_status_id, explanation, alt_protections,
 					approval_review_date)
 	values (100, 1, 'Firewall exception needed to access site.','Protected files should be pass in.',
 			'25-AUG-2016');
@@ -135,52 +135,52 @@ insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Dwyane Wade', 'dwade@gmail.com', 'M101', '512-1234', 'A', '25-AUG-2015', 'view', 1, 'Lab Director');
+	values ('Dwyane Wade', 'dwade@gmail.com', 'M101', '512-1234', 'A', '25-AUG-2015', 'view', 103, 'Lab Director');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Kobe Bryant', 'kobeb@gmail.com', 'M102', '512-1235', 'A', '12-AUG-2015', 'edit', 2, 'Security Chairperson');
+	values ('Kobe Bryant', 'kobeb@gmail.com', 'M102', '512-1235', 'A', '12-AUG-2015', 'edit', 101, 'System Admin');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Tim Duncan', 'timd@gmail.com', 'M103', '512-1236', 'A', '13-AUG-2015', 'edit', 3, 'Executive Director');
+	values ('Tim Duncan', 'timd@gmail.com', 'M103', '512-1236', 'A', '13-AUG-2015', 'edit', 102, 'Executive Director');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('James Harden', 'jamesh@gmail.com', 'M104', '512-1237', 'A', '14-AUG-2015', 'view', 4, 'System Admin');
+	values ('James Harden', 'jamesh@gmail.com', 'M104', '512-1237', 'A', '14-AUG-2015', 'view', 103, 'System Admin');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Kevin Durant', 'kevind@gmail.com', 'M105', '512-1238', 'A', '17-AUG-2015', 'edit', 5, 'Security Chairperson');
+	values ('Kevin Durant', 'kevind@gmail.com', 'M105', '512-1238', 'A', '17-AUG-2015', 'edit', 104, 'System Admin');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Dwight Howard', 'dhoward@gmail.com', 'M106', '512-1239', 'A', '18-AUG-2015', 'view', 1, 'Lab Director');
+	values ('Dwight Howard', 'dhoward@gmail.com', 'M106', '512-1239', 'A', '18-AUG-2015', 'view', 102, 'Lab Director');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Dirk Nowitzki', 'dirkn@gmail.com', 'M107', '512-1265', 'A', '28-AUG-2015', 'view', 2, 'System Admin');
+	values ('Dirk Nowitzki', 'dirkn@gmail.com', 'M107', '512-1265', 'A', '28-AUG-2015', 'view', 103, 'System Admin');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Chris Paul', 'cpaul@gmail.com', 'M108', '512-1212', 'A', '10-AUG-2015', 'edit', 3, 'Lab Director');
+	values ('Chris Paul', 'cpaul@gmail.com', 'M108', '512-1212', 'A', '10-AUG-2015', 'edit', 101, 'Lab Director');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Carmelo Anthony', 'carmelo@gmail.com', 'M109', '512-1289', 'A', '11-AUG-2015', 'view', 4, 'Executive Director');
+	values ('Carmelo Anthony', 'carmelo@gmail.com', 'M109', '512-1289', 'A', '11-AUG-2015', 'view', 100, 'Lab Director');
 insert into F15E3_Employee_view (employee_name, employee_email,
 							employee_office, employee_phone, employee_status,
 							status_eff_date, auth_level, F15E3_Lab_lab_id,
 							F15E3_Emp_Type_emp_type )
-	values ('Jason Terry', 'jasont@gmail.com', 'M110', '512-1267', 'A', '09-AUG-2015', 'none', 3, 'Security Chairperson');	
+	values ('Jason Terry', 'jasont@gmail.com', 'M110', '512-1267', 'A', '09-AUG-2015', 'none', 104, 'Security Chairperson');	
 
 --comment
 insert into F15E3_Comment (comment_id, F15E3_RFE_rfe_id, entered_by_emp_id, 
