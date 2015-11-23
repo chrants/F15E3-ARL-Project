@@ -68,5 +68,5 @@ create view F15E3_RFE_Search_view as
 		INNER JOIN F15E3_RFE_Contacts con ON con.F15E3_RFE_rfe_id = rfe.RFE_ID AND con.role_id = '1' -- requestor
 		INNER JOIN F15E3_Employee emp ON con.F15E3_Employee_employee_id = emp.employee_id
 		INNER JOIN F15E3_Status_History stat_his ON stat_his.F15E3_Status_status_id = rfe.F15E3_Status_status_id
-		INNER JOIN F15E3_Comment comm ON rfe.RFE_ID = comm.F15E3_RFE_rfe_id
+		OUTER LEFT JOIN F15E3_Comment comm ON rfe.RFE_ID = comm.F15E3_RFE_rfe_id
 	WHERE comm.comment_entry_date = (SELECT MAX(comm2.comment_entry_date) FROM F15E3_Comment comm2 WHERE rfe.RFE_ID = comm2.F15E3_RFE_rfe_id);
