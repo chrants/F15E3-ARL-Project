@@ -11,9 +11,13 @@ SELECT
     status_eff_date,
     a.right_level AS auth_level,
     F15E3_Lab_lab_id,
+    l.lab_code as lab_code,
+    l.name as lab_name,
     F15E3_Emp_Type_emp_type
 FROM F15E3_Employee e JOIN F15E3_Auth a
-ON e.employee_id = a.F15E3_Employee_employee_id;
+ON e.employee_id = a.F15E3_Employee_employee_id
+JOIN F15E3_Lab l
+ON e.F15E3_Lab_lab_id = l.lab_id;
 
 create or replace TRIGGER F15E3_Employee_trigger
      INSTEAD OF insert ON F15E3_Employee_view
