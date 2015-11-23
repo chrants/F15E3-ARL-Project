@@ -9,36 +9,32 @@ SELECT
     employee_phone,
     employee_status,
     status_eff_date,
-    F15E3_Auth_auth_id,
+    a.right_level AS auth_level,
     F15E3_Lab_lab_id,
-    l.lab_code as lab_code,
-    l.name as lab_name,
     F15E3_Emp_Type_emp_type
 FROM F15E3_Employee e JOIN F15E3_Auth a
-ON e.employee_id = a.F15E3_Employee_employee_id
-JOIN F15E3_Lab l
-ON e.F15E3_Lab_lab_id = l.lab_id;
+ON e.employee_id = a.F15E3_Employee_employee_id;
 
 create or replace TRIGGER F15E3_Employee_trigger
      INSTEAD OF insert ON F15E3_Employee_view
      FOR EACH ROW
 BEGIN
-	-- For Checking if only one executive director and chairperson
-	DECLARE
-	emp_id Integer;
-	BEGIN
-		IF (:NEW.F15E3_Emp_Type_emp_type = 'Executive Director') THEN
-			SELECT employee_id 
-			INTO emp_id
-			FROM F15E3_Employee 
-			WHERE (F15E3_Emp_Type_emp_type = 'Executive Director');
-		END IF;
-		IF (:NEW.F15E3_Emp_Type_emp_type = 'Security Chairperson')THEN
-			SELECT employee_id 
-			INTO emp_id
-			FROM F15E3_Employee 
-			WHERE (F15E3_Emp_Type_emp_type = 'Security Chairperson');
-		END IF;
+    -- For Checking if only one executive director and chairperson
+    DECLARE
+    emp_id Integer;
+    BEGIN
+        IF (:NEW.F15E3_Emp_Type_emp_type = 'Executive Director') THEN
+            SELECT employee_id 
+            INTO emp_id
+            FROM F15E3_Employee 
+            WHERE (F15E3_Emp_Type_emp_type = 'Executive Director');
+        END IF;
+        IF (:NEW.F15E3_Emp_Type_emp_type = 'Security Chairperson')THEN
+            SELECT employee_id 
+            INTO emp_id
+            FROM F15E3_Employee 
+            WHERE (F15E3_Emp_Type_emp_type = 'Security Chairperson');
+        END IF;
 
         -- CASE: One Executive Director or Secuirty Chairperson
         IF(emp_id IS NOT NULL) THEN
@@ -48,25 +44,36 @@ BEGIN
         END IF;
 
         -- CASE: Too many executive directors/security chairperson
-		EXCEPTION
+        EXCEPTION
         WHEN no_data_found THEN
             NULL;
-		WHEN too_many_rows THEN
-			raise_application_error(-20022,'An error was encountered - '
+        WHEN too_many_rows THEN
+            raise_application_error(-20022,'An error was encountered - '
                 ||SQLCODE||' -ERROR- '||SQLERRM);
 
-	END;
-	
+    END;
+    
     DECLARE
     status_eff_date DATE;
+    auth_level VARCHAR2 (4000);
+    emp_no NUMBER;
+    auth_no NUMBER;
     BEGIN
-        IF (:NEW.status_eff_date IS NULL)THEN
+    emp_no := F15E3_Employee_seq.nextval;
+    auth_no := F15E3_Auth_seq.nextval;
+        IF (:NEW.status_eff_date IS NULL) THEN
             status_eff_date := localtimestamp;
         ELSE
             status_eff_date := :NEW.status_eff_date;
         END IF;
+        IF (:NEW.auth_level IS NULL) THEN
+            auth_level := 'None';
+        ELSE
+            auth_level := :NEW.auth_level;
+        END IF;
     -- One sys admin and lab direct per lab
         insert into F15E3_Employee( 
+            employee_id,
             employee_name,
             employee_email,
             employee_office,
@@ -77,17 +84,26 @@ BEGIN
             F15E3_Lab_lab_id,
             F15E3_Emp_Type_emp_type)
              VALUES ( 
+            emp_no,
             :NEW.employee_name,
             :NEW.employee_email,
             :NEW.employee_office,
             :NEW.employee_phone,
             :NEW.employee_status,
             status_eff_date,
-            :NEW.F15E3_Auth_auth_id,
+            auth_no,
             :NEW.F15E3_Lab_lab_id,
             :NEW.F15E3_Emp_Type_emp_type) ;
-            END;
 
+        insert into F15E3_Auth(
+            auth_id,
+            right_level,
+            F15E3_Employee_employee_id)
+        VALUES (
+            auth_no,
+            auth_level,
+            emp_no);
+        END;
 END;
 /
 
