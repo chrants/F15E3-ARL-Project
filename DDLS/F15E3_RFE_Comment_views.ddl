@@ -1,3 +1,5 @@
+drop function status_name;
+
 CREATE OR REPLACE FUNCTION status_name
 (
   status_no INTEGER
@@ -15,6 +17,8 @@ BEGIN
 END;
 /
 
+drop function emp_name;
+
 CREATE OR REPLACE FUNCTION emp_name
 (
   emp_no INTEGER
@@ -31,6 +35,8 @@ BEGIN
   RETURN emp_name;
 END;
 /
+
+drop function get_lab_code;
 
 CREATE OR REPLACE FUNCTION get_lab_code
 (
