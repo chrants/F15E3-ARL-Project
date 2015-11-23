@@ -22,7 +22,7 @@ CREATE TABLE Movie
   (
     movie_id                   INTEGER NOT NULL ,
     title                      VARCHAR2 (255) NOT NULL ,
-    release_date               DATE ,
+    release_date               VARCHAR2 (255) NOT NULL,
     rating                     VARCHAR2 (255) NOT NULL ,
     total_gross                INTEGER ,
     inflation_gross            INTEGER ,
