@@ -73,14 +73,15 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="entered_by_emp_id" id="FCB7275F-10FB-01DC-F8E8-CB4A7E0C2BEC">
-<createdBy>Sean</createdBy>
-<createdTime>2015-11-17 21:44:46 UTC</createdTime>
+<Attribute name="entered_by_emp_id" id="B2D4311D-2D8A-0215-D7A3-3B4321EF3A95">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:51:51 UTC</createdTime>
+<generatorID>BE940B2A-9A50-E1C8-0C70-4FF9F3506D70</generatorID>
 <ownerDesignName>RFE Conceptual Model</ownerDesignName>
-<importedID>DB900C5C-A753-2CBA-920D-41038C15F469</importedID>
 <engineerTo>
 <item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
 </engineerTo>
+<referedAttribute>9B8C10EA-6247-6C11-AB9B-F3E24AB66346</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

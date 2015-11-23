@@ -28,6 +28,19 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="lab_code" id="0297CCE5-F5EB-BF48-2669-9B0794280CEB">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:43:24 UTC</createdTime>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<ownDataTypeParameters>4,,</ownDataTypeParameters>
+</Attribute>
 <Attribute name="name" id="C3657DC9-2F8A-6FC3-331D-9538B53F2F66">
 <createdBy>Sean</createdBy>
 <createdTime>2015-11-17 21:44:46 UTC</createdTime>

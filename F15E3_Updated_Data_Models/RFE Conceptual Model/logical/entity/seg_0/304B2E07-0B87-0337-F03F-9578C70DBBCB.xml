@@ -44,19 +44,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="entered_by_emp_id" id="6E50A4E6-4EBE-295D-E465-0BD320A1813A">
-<createdBy>Sean</createdBy>
-<createdTime>2015-11-17 21:44:46 UTC</createdTime>
-<ownerDesignName>RFE Conceptual Model</ownerDesignName>
-<importedID>05547557-0385-F00E-1A73-43BFF7DEEFB3</importedID>
-<engineerTo>
-<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="comment_entry_date" id="FF8500A5-737D-4286-600B-8748B77DB605">
 <createdBy>Sean</createdBy>
 <createdTime>2015-11-17 21:44:46 UTC</createdTime>
@@ -83,6 +70,20 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>4000</dataTypeSize>
 <ownDataTypeParameters>4000,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="entered_by_emp_id" id="0EDDF110-AF88-40D6-AE83-80B10621B009">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:52:48 UTC</createdTime>
+<generatorID>FE32829D-A94F-BE08-48AB-094BF91D2AAF</generatorID>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<referedAttribute>9B8C10EA-6247-6C11-AB9B-F3E24AB66346</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">

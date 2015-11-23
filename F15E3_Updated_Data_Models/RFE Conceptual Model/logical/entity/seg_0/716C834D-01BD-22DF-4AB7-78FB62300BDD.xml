@@ -157,38 +157,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="emp_type1" id="4969497A-3CB9-01EA-BAAA-F36F9D74E748">
-<createdBy>Sean</createdBy>
-<createdTime>2015-11-17 22:31:19 UTC</createdTime>
-<generatorID>7FE48918-866E-7B1E-E6D9-BB8710D5B8EA</generatorID>
-<ownerDesignName>RFE Conceptual Model</ownerDesignName>
-<engineerTo>
-<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>99EC2836-8728-1D79-6B1F-CC29777BA506</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="emp_type2" id="D6DD45DF-06C8-D4C3-9350-97023F9A2453">
-<createdBy>Sean</createdBy>
-<createdTime>2015-11-17 22:31:53 UTC</createdTime>
-<generatorID>D6AB4373-C550-1627-64C9-62DADE587DCE</generatorID>
-<ownerDesignName>RFE Conceptual Model</ownerDesignName>
-<engineerTo>
-<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>99EC2836-8728-1D79-6B1F-CC29777BA506</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="0AB9FDE5-3AD8-476C-0D82-E8AE919890BF" name="Entity_2 PK">

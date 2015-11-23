@@ -85,6 +85,21 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="employee_id" id="1EE53C96-96D3-B32A-82CE-ADCDFDD0CB7F">
+<createdBy>kairos</createdBy>
+<createdTime>2015-11-23 13:59:49 UTC</createdTime>
+<generatorID>C3580E47-4543-FC07-2B06-14C6AB9B9BA8</generatorID>
+<ownerDesignName>RFE Conceptual Model</ownerDesignName>
+<engineerTo>
+<item key="0158C08B-E391-E306-06BC-4AB4DF4EA636" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>9B8C10EA-6247-6C11-AB9B-F3E24AB66346</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="5B55339D-EF27-987B-73A8-2DA47282252D" name="F15_E3_ARL PK">
