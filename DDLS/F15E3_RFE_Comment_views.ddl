@@ -64,7 +64,7 @@ create view F15E3_RFE_Search_Edit_view as
 		status_name(rfe.F15E3_Status_status_id) AS Status, 
 		stat_his.effective_date AS "Status Eff Date",
 		comm.comment_body AS "Last Comments",
-    explaination,
+    explanation,
     alt_protections,
     approval_review_date
 	FROM F15E3_RFE rfe
